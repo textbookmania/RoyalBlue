@@ -1,0 +1,9 @@
+<template name="Home">
+
+  {{#if currentUser}}
+    The current user is: {{ currentUser.profile.name }}
+  {{else}}
+    No one is logged in.
+  {{/if}}
+
+</template>
