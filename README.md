@@ -1,5 +1,7 @@
 # RoyalBlue
 
-remember to run with or else you cant log in:
-
+run with:
+```
 meteor --settings ../config/settings.development.json
+```
+else you cant log in
