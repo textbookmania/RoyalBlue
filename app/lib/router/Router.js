@@ -22,12 +22,6 @@ Router.route('/add', {
   name: 'AddStuff'
 });
 
-<<<<<<< HEAD
-=======
-Router.route('/Help',{
-  name: 'Help'
-});
->>>>>>> refs/heads/pr/8
 
 Router.route('/stuff/:_id', {
   name: 'EditStuff',

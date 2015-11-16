@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 {
   "cas": {
@@ -15,13 +14,6 @@
   },
   "allowed_users": [
     "johnson",
-    "cmoore",
-    "sy",
-    "bjboado",
-    "mgy"
+    "cmoore"
   ]
-=======
-{
-  "defaultAccount": {"username": "John", "password": "changeme"}
->>>>>>> refs/heads/pr/8
 }
