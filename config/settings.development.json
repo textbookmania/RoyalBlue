@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 {
   "cas": {
@@ -19,4 +20,8 @@
     "bjboado",
     "mgy"
   ]
+=======
+{
+  "defaultAccount": {"username": "John", "password": "changeme"}
+>>>>>>> refs/heads/pr/8
 }

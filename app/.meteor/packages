@@ -26,5 +26,8 @@ accounts-password
 underscore
 ejson
 check
+<<<<<<< HEAD
 atoy40:accounts-cas
 random
+=======
+>>>>>>> refs/heads/pr/8
