@@ -1,9 +1,65 @@
 <template name="Home">
 
   {{#if currentUser}}
-    The current user is: {{ currentUser.profile.name }}
+    <center><h4>The current user is: {{ currentUser.profile.name }}</h4></center>
+
+  <div class="container">
+    <div class="row" >
+      <div class="col-md-3">
+        <div class="well">
+          <h2>Students</h2>
+
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="well">
+          <h2>Buy Orders</h2>
+
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="well">
+          <h2>Matches</h2>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="well">
+          <h2>TextBooks</h2>
+
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="well">
+          <h2>Sell Orders</h2>
+
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="well">
+          <h2>Help</h2>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
   {{else}}
-    No one is logged in.
+
+  <h3>No one is logged in.
+  Need <a href="{{ pathFor 'Help' }}">help</a>?</h3>
+
+  <p>
+  <div class="homepageImage"></div>
+  </p>
   {{/if}}
 
 </template>
