@@ -26,6 +26,34 @@ Router.route('/Help',{
   name: 'Help'
 });
 
+Router.route('/textbooks',{
+  name: 'Textbooks'
+});
+
+Router.route('/addTextbook',{
+  name: 'AddTextbook'
+});
+
+Router.route('/buyOrders',{
+  name: 'BuyOrders'
+});
+
+Router.route('/addBuyOrder',{
+  name: 'AddBuyOrder'
+});
+
+Router.route('/sellOrders',{
+  name: 'SellOrders'
+});
+
+Router.route('/addSellOrder',{
+  name: 'AddSellOrder'
+});
+
+Router.route('/matches',{
+  name: 'Matches'
+});
+
 Router.route('/stuff/:_id', {
   name: 'EditStuff',
   data: function() { return Stuff.findOne(this.params._id); }
