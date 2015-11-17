@@ -16,8 +16,36 @@
 
         <ul class="nav navbar-nav navbar-right">
           {{#if currentUser}}
-            <li><a href="{{ pathFor 'AddStuff' }}">Add Stuff</a></li>
-            <li><a href="{{ pathFor 'ListStuff' }}">List Stuff</a></li>
+          <li>
+            <a data-toggle="dropdown" class="dropdown-toggle">Textbooks <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="{{ pathFor 'Textbooks' }}">List Textbooks</a></li>
+              <li><a href="{{ pathFor 'AddTextbook' }}">Add Textbooks</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a data-toggle="dropdown" class="dropdown-toggle">Buy<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="{{ pathFor 'BuyOrders' }}">List Buy Orders</a></li>
+              <li><a href="{{ pathFor 'AddBuyOrder' }}">Add Buy Order</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a data-toggle="dropdown" class="dropdown-toggle">Sell<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="{{ pathFor 'SellOrders' }}">List Sell Orders</a></li>
+              <li><a href="{{ pathFor 'AddSellOrder' }}">Add Sell Order</a></li>
+            </ul>
+          </li>
+
+
+          <li><a href="{{ pathFor 'Matches' }}">Matches</a></li>
+
+            <!-- old stuff collection  -->
+            <!--<li><a href="{{ pathFor 'AddStuff' }}">Add Stuff</a></li>
+            <li><a href="{{ pathFor 'ListStuff' }}">List Stuff</a></li> -->
           {{/if}}
           <li><a href="{{ pathFor 'Help' }}">Help</a></li>
           {{> CasLogin }}
