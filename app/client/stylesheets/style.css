@@ -10,3 +10,23 @@ body {
 .navbar-inverse .navbar-brand{
   color: #dbdbdb;
 }
+
+.container {
+  text-align: center;
+}
+
+.well {
+  text-align: center;
+  border-color: #080808;
+
+}
+
+
+.homepageImage {
+  background-image: url("/images/homeimage2.jpg");
+  height: 400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
