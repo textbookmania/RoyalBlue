@@ -3,14 +3,14 @@
  * See: https://github.com/aldeed/meteor-autoform#callbackshooks
  */
 AutoForm.hooks({
-  AddBuyOfferForm: {
+  AddSellOfferForm: {
     /**
-     * After successful form submission, go to the List buy offer page.
+     * After successful form submission, go to the List sell offers page.
      * @param formType The form.
      * @param result The result of form submission.
      */
     onSuccess: function(formType, result) {
-      Router.go('ListBuyOffer');
+      Router.go('ListSellOffer');
     }
   }
 });

@@ -1,5 +1,5 @@
-<template name="ListBuyOffer">
-  <h1>Your buy offers</h1>
+<template name="ListSellOffer">
+  <h1>Your sell offers</h1>
   {{#IfLoggedIn}}
     <div class="well">
 
@@ -18,7 +18,7 @@
         </thead>
 
         <tbody>
-        {{#each buyOfferList}}
+        {{#each sellOfferList}}
           <tr>
             <td>picture</td>
             <td>{{description}}</td>
@@ -26,8 +26,8 @@
             <th>{{condition}}</th>
             <th>{{offer}}</th>
             <td>{{expire}}</td>
-            <td><a href="{{pathFor 'EditBuyOffer'}}">Edit</a></td>
-            <td><a class="delete" href="{{pathFor 'DeleteBuyOffer'}}">Delete</a></td>
+            <td><a href="{{pathFor 'EditsellOffer'}}">Edit</a></td>
+            <td><a class="delete" href="{{pathFor 'DeleteSellOffer'}}">Delete</a></td>
           </tr>
         {{/each}}
         </tbody>

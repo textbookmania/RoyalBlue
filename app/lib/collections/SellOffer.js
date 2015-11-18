@@ -1,54 +1,54 @@
-buyOffer = "BuyOffer";  // avoid typos, this string occurs many times.
+sellOffer = "SellOffer";  // avoid typos, this string occurs many times.
 
-BuyOffer = new Mongo.Collection(buyOffer);
+SellOffer = new Mongo.Collection(sellOffer);
 
 Meteor.methods({
   /**
    * Invoked by AutoForm to add a new BuyOffer record.
    * @param doc The Textbooks document.
    */
-  addBuyOffer: function(doc) {
-    check(doc, BuyOffer.simpleSchema());
-    BuyOffer.insert(doc);
+  addSellOffer: function(doc) {
+    check(doc, SellOffer.simpleSchema());
+    SellOffer.insert(doc);
   },
   /**
    *
-   * Invoked by AutoForm to update a BuyOffer record.
+   * Invoked by AutoForm to update a SellOffer record.
    * @param doc The Textbooks document.
    * @param docID It's ID.
    */
-  editBuyOffer: function(doc, docID) {
-    check(doc, BuyOffer.simpleSchema());
-    BuyOffer.update({_id: docID}, doc);
+  editSellOffer: function(doc, docID) {
+    check(doc, SellOffer.simpleSchema());
+    SellOffer.update({_id: docID}, doc);
   },
 
-  deleteBuyOffer: function(docID){
-    BuyOffer.remove(docID);
+  deleteSellOffer: function(docID){
+    SellOffer.remove(docID);
   }
 });
 
 // Publish the entire Collection.  Subscription performed in the router.
 if (Meteor.isServer) {
-  Meteor.publish(buyOffer, function () {
-    return BuyOffer.find();
+  Meteor.publish(sellOffer, function () {
+    return SellOffer.find();
   });
 }
 
 
 /**
- * Create the schema for BuyOffer
+ * Create the schema for SellOffer
  * See: https://github.com/aldeed/meteor-autoform#common-questions
  * See: https://github.com/aldeed/meteor-autoform#affieldinput
  */
-BuyOffer.attachSchema(new SimpleSchema({
+SellOffer.attachSchema(new SimpleSchema({
   description: {
     label: "Decsription",
     type: String,
     optional: true,
     max: 20,
     autoform: {
-      group: buyOffer,
-      placeholder: "Foo"
+      group: sellOffer,
+      placeholder: "Bar"
     }
   },
   isbn: {
@@ -57,7 +57,7 @@ BuyOffer.attachSchema(new SimpleSchema({
     optional: false,
     max: 20,
     autoform: {
-      group: buyOffer,
+      group: sellOffer,
       placeholder: "0000000000"
     }
   },
@@ -68,7 +68,7 @@ BuyOffer.attachSchema(new SimpleSchema({
     optional: false,
     max: 20,
     autoform: {
-      group: buyOffer,
+      group: sellOffer,
       placeholder: "excellent, good, fair, or poor"
     }
   },
@@ -77,7 +77,7 @@ BuyOffer.attachSchema(new SimpleSchema({
     type: Number,
     optional: false,
     autoform: {
-      group: buyOffer,
+      group: sellOffer,
       placeholder: "0"
     }
   },
@@ -87,7 +87,7 @@ BuyOffer.attachSchema(new SimpleSchema({
     optional: true,
     max: 100,
     autoform: {
-      group: buyOffer,
+      group: sellOffer,
       placeholder: "image.org"
     }
   },
@@ -96,7 +96,7 @@ BuyOffer.attachSchema(new SimpleSchema({
     optional: true,
     autoform: {
       type: "hidden",
-      group: buyOffer,
+      group: sellOffer,
       placeholder: "0"
     }
   }

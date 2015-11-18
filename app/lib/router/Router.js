@@ -8,6 +8,7 @@ Router.configure({
   layoutTemplate: 'Layout',
   waitOn: function() { return Meteor.subscribe("Textbooks"); },
   waitOn: function() { return Meteor.subscribe("BuyOffer"); },
+  waitOn: function() { return Meteor.subscribe("SellOffer"); },
   loadingTemplate: 'Loading'
 });
 
@@ -53,8 +54,8 @@ Router.route('/textbooks/:_id', {
 });
 
 Router.route('/listBuyOffer/:_id', {
-      name: 'EditBuyOffer',
-      data: function() { return BuyOffer.findOne(this.params._id); }
+  name: 'EditBuyOffer',
+  data: function() { return BuyOffer.findOne(this.params._id); }
 });
 
 Router.route('/listSellOffer/:_id', {
