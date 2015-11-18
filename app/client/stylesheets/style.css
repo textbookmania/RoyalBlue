@@ -1,5 +1,5 @@
 body {
-  padding-top: 1px;  /* Move body of page below navbar. */
+  padding-top: 0px;  /* Move body of page below navbar. */
 }
 
 .bookHeader {
