@@ -8,7 +8,7 @@ Template.ListBuyOffer.helpers({
   }
 });
 
-Template.BuyOffer.events({
+Template.ListBuyOffer.events({
   'click .delete': function(e){
     e.preventDefault();
     if (confirm("Delete this buy offer??")) {

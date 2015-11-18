@@ -6,8 +6,9 @@
         <thead>
         <tr>
           <th>picture</th>
-          <th>Title</th>
+          <th>Description</th>
           <th>ISBN</th>
+          <th>Condition</th>
           <th>Offer</th>
           <td>Expires</td>
           <th>Edit</th>
@@ -19,8 +20,9 @@
         {{#each buyOfferList}}
           <tr>
             <td>picture</td>
-            <td>{{title}}</td>
+            <td>{{description}}</td>
             <td>{{isbn}}</td>
+            <th>{{condition}}</th>
             <th>{{offer}}</th>
             <td>{{expire}}</td>
             <td><a href="{{pathFor 'EditBuyOffer'}}">Edit</a></td>
