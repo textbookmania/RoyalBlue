@@ -1,0 +1,31 @@
+<template name="Textbooks">
+  {{#IfLoggedIn}}
+    <div class="well">
+
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Picture</th>
+          <th>Title</th>
+          <th>ISBN</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {{#each textbooksList}}
+          <tr>
+            <th>picture</th>
+            <td>{{title}}</td>
+            <td>{{isbn}}</td>
+            <td><a href="{{pathFor 'EditTextbooks'}}">Edit</a></td>
+            <td><a class="delete" href="{{pathFor 'DeleteTextbooks'}}">Delete</a></td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+
+    </div>
+  {{/IfLoggedIn}}
+</template>

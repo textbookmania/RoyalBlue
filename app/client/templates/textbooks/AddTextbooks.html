@@ -1,0 +1,16 @@
+<template name="AddTextbooks">
+  {{#IfLoggedIn}}
+    <div class="well">
+      {{> quickForm
+      collection="Textbooks"
+      template="bootstrap3-horizontal"
+      label-class="col-sm-2"
+      input-col-class="col-sm-10"
+
+      id="AddTextbooksForm"
+      type="method"
+      meteormethod="addTextbooks"
+      resetOnSuccess=true}}
+    </div>
+  {{/IfLoggedIn}}
+</template>
