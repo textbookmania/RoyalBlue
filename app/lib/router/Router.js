@@ -17,6 +17,18 @@ Router.route('/', {
   name: 'Home'
 });
 
+Router.route('/students', {
+  name: 'Students'
+});
+
+Router.route('/list', {
+  name: 'ListStuff'
+});
+
+Router.route('/add', {
+  name: 'AddStuff'
+});
+
 Router.route('/Help',{
   name: 'Help'
 });
