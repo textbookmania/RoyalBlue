@@ -1,15 +1,16 @@
-<template name="AddStuff">
+<template name="AddSellOffer">
+  <h1>Add new sell offer</h1>
   {{#IfLoggedIn}}
     <div class="well">
       {{> quickForm
-      collection="Stuff"
+      collection="SellOffer"
       template="bootstrap3-horizontal"
       label-class="col-sm-2"
       input-col-class="col-sm-10"
 
-      id="AddStuffForm"
+      id="AddSellOfferForm"
       type="method"
-      meteormethod="addStuff"
+      meteormethod="addSellOffer"
       resetOnSuccess=true}}
     </div>
   {{/IfLoggedIn}}
