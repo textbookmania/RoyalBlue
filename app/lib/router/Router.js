@@ -6,8 +6,11 @@
 
 Router.configure({
   layoutTemplate: 'Layout',
-  waitOn: function() { return Meteor.subscribe("Stuff"); },
-  loadingTemplate: 'Loading'
+  loadingTemplate: 'Loading',
+  waitOn: function() {
+    return [Meteor.subscribe("Textbooks"), Meteor.subscribe("BuyOffer"), Meteor.subscribe("SellOffer")]
+  }
+
 });
 
 Router.route('/', {
@@ -34,31 +37,41 @@ Router.route('/textbooks',{
   name: 'Textbooks'
 });
 
-Router.route('/addTextbook',{
-  name: 'AddTextbook'
+Router.route('/addTextbooks',{
+  name: 'AddTextbooks'
 });
 
-Router.route('/buyOrders',{
-  name: 'BuyOrders'
+Router.route('/listBuyOffer',{
+  name: 'ListBuyOffer'
 });
 
-Router.route('/addBuyOrder',{
-  name: 'AddBuyOrder'
+Router.route('/addBuyOffer',{
+  name: 'AddBuyOffer'
 });
 
-Router.route('/sellOrders',{
-  name: 'SellOrders'
+Router.route('/listSellOffer',{
+  name: 'ListSellOffer'
 });
 
-Router.route('/addSellOrder',{
-  name: 'AddSellOrder'
+Router.route('/addSellOffer',{
+  name: 'AddSellOffer'
 });
 
 Router.route('/matches',{
   name: 'Matches'
 });
 
-Router.route('/stuff/:_id', {
-  name: 'EditStuff',
-  data: function() { return Stuff.findOne(this.params._id); }
+Router.route('/textbooks/:_id', {
+  name: 'EditTextbooks',
+  data: function() { return Textbooks.findOne(this.params._id); }
+});
+
+Router.route('/listBuyOffer/:_id', {
+  name: 'EditBuyOffer',
+  data: function() { return BuyOffer.findOne(this.params._id); }
+});
+
+Router.route('/listSellOffer/:_id', {
+  name: 'EditSellOffer',
+  data: function() { return SellOffer.findOne(this.params._id); }
 });
