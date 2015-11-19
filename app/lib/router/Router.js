@@ -14,6 +14,10 @@ Router.route('/', {
   name: 'Home'
 });
 
+Router.route('/students', {
+  name: 'Students'
+});
+
 Router.route('/list', {
   name: 'ListStuff'
 });

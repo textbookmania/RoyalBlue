@@ -7,14 +7,15 @@ body {
   background-size: 1000px;
   background-repeat: no-repeat;
   background-position: center;
-  height: 320px;
+  height: 200px;
   background-color: royalblue;
 }
 
 .navbar-inverse {
   background-color: RoyalBlue;
-  border-color: RoyalBlue;
+  border-color: royalblue;
   border-radius: 0px;
+  color: white;
 }
 
 .navbar-inverse .navbar-brand{
@@ -29,11 +30,11 @@ body {
   text-align: center;
   color: royalblue;
   border-color: #080808;
+  border-width: 3px;
   background-image: url("/images/three.png");
   background-size: cover;
 
 }
-
 
 .homepageImage {
   background-image: url("/images/homeimage2.jpg");
