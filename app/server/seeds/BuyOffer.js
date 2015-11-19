@@ -3,8 +3,8 @@
  * @type {*[]}
  */
 var buyOfferSeeds = [
-  {isbn: "3", condition: "good",offer: 1, expire: "00000000"},
-  {isbn: "2", condition: "poor",offer: 2, expire: "00000000"}
+  {isbn: "3", condition: "good",offer: 1},
+  {isbn: "2", condition: "poor",offer: 2}
 ];
 
 /**

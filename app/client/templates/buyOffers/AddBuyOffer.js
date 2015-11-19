@@ -1,5 +1,5 @@
 /**
- * After successful addition of a new textbooks document, go to List page.
+ * After successful addition of a new buy offer document, go to List page.
  * See: https://github.com/aldeed/meteor-autoform#callbackshooks
  */
 AutoForm.hooks({
