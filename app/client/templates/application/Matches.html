@@ -1,0 +1,40 @@
+<template name="Matches">
+  <div class="container">
+    <div class="well">
+      <h1>List of all matching orders to sell/buy offers</h1>
+      {{#IfLoggedIn}}
+
+
+        <table class="table">
+          <thead>
+          <tr>
+            <th>picture</th>
+            <th>Description</th>
+            <th>ISBN</th>
+            <th>Condition</th>
+            <th>Offer</th>
+            <td>Expires</td>
+            <th>Accept Offer</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          {{#each findMatches}}
+          <tr>
+            <td>picture</td>
+            <td>{{description}}</td>
+            <td>{{isbn}}</td>
+            <th>{{condition}}</th>
+            <th>{{offer}}</th>
+            <td>{{expire}}</td>
+            <td><a class="accept" href="#">Accept</a></td>
+          </tr>
+          {{/each}}
+          </tbody>
+        </table>
+
+
+      {{/IfLoggedIn}}
+    </div>
+  </div>
+</template>
