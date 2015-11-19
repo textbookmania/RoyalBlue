@@ -6,10 +6,11 @@
 
 Router.configure({
   layoutTemplate: 'Layout',
-  waitOn: function() { return Meteor.subscribe("Textbooks"); },
-  waitOn: function() { return Meteor.subscribe("BuyOffer"); },
-  waitOn: function() { return Meteor.subscribe("SellOffer"); },
-  loadingTemplate: 'Loading'
+  loadingTemplate: 'Loading',
+  waitOn: function() {
+    return [Meteor.subscribe("Textbooks"), Meteor.subscribe("BuyOffer"), Meteor.subscribe("SellOffer")]
+  }
+
 });
 
 Router.route('/', {

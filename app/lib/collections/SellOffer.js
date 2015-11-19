@@ -4,7 +4,7 @@ SellOffer = new Mongo.Collection(sellOffer);
 
 Meteor.methods({
   /**
-   * Invoked by AutoForm to add a new BuyOffer record.
+   * Invoked by AutoForm to add a new SellOffer record.
    * @param doc The Textbooks document.
    */
   addSellOffer: function(doc) {
@@ -97,7 +97,7 @@ SellOffer.attachSchema(new SimpleSchema({
     autoform: {
       type: "hidden",
       group: sellOffer,
-      placeholder: "0"
+      placeholder: "1"
     }
   }
 
