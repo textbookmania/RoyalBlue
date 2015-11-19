@@ -1,14 +1,14 @@
 body {
   padding-top: 0px;  /* Move body of page below navbar. */
+  text-align: center;
 }
 
 .bookHeader {
-  background-image: url("/images/fy.jpg");
-  background-size: 1000px;
+  background-image: url("/images/tbm3.png");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 200px;
-  background-color: royalblue;
+  height: 240px;
 }
 
 .navbar-inverse {
@@ -22,18 +22,32 @@ body {
   color: #dbdbdb;
 }
 
-.container {
-  text-align: center;
+a {
+  color: royalblue;
+
 }
 
 .well {
-  text-align: center;
+  text-align: right;
   color: royalblue;
   border-color: #080808;
   border-width: 3px;
-  background-image: url("/images/three.png");
-  background-size: cover;
+  background-color: white;
+}
 
+.studentLogo {
+  background-image: url("/images/student.jpg");
+  background-size: 30%;
+  background-position: left;
+  background-repeat: no-repeat;
+
+}
+
+.buy {
+  background-image: url("/images/addtocart.jpeg");
+  background-size: 30%;
+  background-position: left;
+  background-repeat: no-repeat;
 }
 
 .homepageImage {

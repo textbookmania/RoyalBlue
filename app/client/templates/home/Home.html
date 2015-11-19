@@ -6,20 +6,25 @@
   <div class="container">
     <div class="row" >
       <div class="col-lg-4">
-        <div class="well">
+        <div class="well studentLogo">
           <h1><a href="{{ pathFor 'Students' }}">Students</a></h1>
+          <div class="studentLogo"></div>
+          <h4>Connect with other students<br> Make friends!</h4>
 
         </div>
       </div>
       <div class="col-lg-4">
-        <div class="well">
+        <div class="well buy">
           <h1><a href="{{ pathFor 'BuyOrders' }}">Buy Orders</a></h1>
+          <div class="buy"></div>
+          <h4>Looking for a book? <br>List it here. We'll help find a seller.</h4>
 
         </div>
       </div>
       <div class="col-lg-4">
         <div class="well">
           <h1><a href="{{ pathFor 'Matches' }}">Matches</a></h1>
+          <h4>We'll search our database for potential buyers and sellers.</h4>
 
         </div>
       </div>
@@ -32,18 +37,21 @@
       <div class="col-lg-4">
         <div class="well">
           <h1><a href="{{ pathFor 'Textbooks' }}">TextBooks</a></h1>
+          <h4>View our current books! Add a book if you don't see what you need!</h4>
 
         </div>
       </div>
       <div class="col-lg-4">
         <div class="well">
           <h1><a href="{{ pathFor 'SellOrders' }}">Sell Orders</a></h1>
+          <h4>Got used textbooks to sell? List it here.</h4>
 
         </div>
       </div>
       <div class="col-lg-4">
         <div class="well">
           <h1><a href="{{ pathFor 'Help' }}">Help</a></h1>
+          <h4>We'll do our best to answer your questions.</h4>
 
         </div>
       </div>
@@ -54,7 +62,7 @@
 
   {{else}}
 
-  <h3>No one is logged in.
+  <h3>You are currently not logged in.
   Need <a href="{{ pathFor 'Help' }}">help</a>?</h3>
 
   <p>
