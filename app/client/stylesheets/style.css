@@ -1,10 +1,20 @@
 body {
-  padding-top: 70px;  /* Move body of page below navbar. */
+  padding-top: 0px;  /* Move body of page below navbar. */
+}
+
+.bookHeader {
+  background-image: url("/images/fy.jpg");
+  background-size: 1000px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 320px;
+  background-color: royalblue;
 }
 
 .navbar-inverse {
   background-color: RoyalBlue;
   border-color: RoyalBlue;
+  border-radius: 0px;
 }
 
 .navbar-inverse .navbar-brand{
@@ -17,7 +27,10 @@ body {
 
 .well {
   text-align: center;
+  color: royalblue;
   border-color: #080808;
+  background-image: url("/images/three.png");
+  background-size: cover;
 
 }
 
