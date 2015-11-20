@@ -12,6 +12,7 @@
           <th>Condition</th>
           <th>Offer</th>
           <td>Expires</td>
+
           <th>Edit</th>
           <th>Delete</th>
         </tr>
@@ -26,8 +27,10 @@
             <th>{{condition}}</th>
             <th>{{offer}}</th>
             <td>{{expire}}</td>
+
             <td><a href="{{pathFor 'EditSellOffer'}}">Edit</a></td>
             <td><a class="delete" href="#">Delete</a></td>
+
           </tr>
         {{/each}}
         </tbody>

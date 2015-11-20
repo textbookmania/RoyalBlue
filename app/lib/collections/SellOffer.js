@@ -99,6 +99,17 @@ SellOffer.attachSchema(new SimpleSchema({
       group: sellOffer,
       placeholder: "1"
     }
+  },
+  owner: {
+    label: "0",
+    type: String,
+    optional: true,
+    max: 20,
+    autoform: {
+      type: "hidden",
+      group: sellOffer,
+      placeholder: ""
+    }
   }
 
 }));
