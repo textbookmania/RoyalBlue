@@ -2,6 +2,8 @@ student = "Student";  // avoid typos, this string occurs many times.
 
 Student = new Mongo.Collection(student);
 
+
+
 Meteor.methods({
   /**
    * Invoked by AutoForm to add a new Student record.
@@ -54,7 +56,7 @@ Student.attachSchema(new SimpleSchema({
   last: {
     label: "Last Name",
     type: String,
-    optional: false,
+    optional: true,
     max: 20,
     autoform: {
       group: student,
@@ -75,7 +77,7 @@ Student.attachSchema(new SimpleSchema({
   send: {
     label: "Send email notifications",
     type: Boolean,
-    optional: false,
+    optional: true,
     max: 20,
     autoform: {
       group: student,

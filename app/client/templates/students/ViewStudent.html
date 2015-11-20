@@ -17,14 +17,14 @@
         </thead>
 
         <tbody>
-        {{#each studentList}}
+        {{#each currentStudent}}
           <tr>
             <th>picture</th>
             <td>{{firstName}}</td>
             <td>{{lastName}}</td>
             <td>{{email}}</td>
             <td>{{send}}</td>
-            <td><a href="{{pathFor 'EditStudent'}}">Edit</a></td>
+            <td><a href="{{pathFor 'EditCurrentStudent'}}">Edit</a></td>
 
           </tr>
         {{/each}}

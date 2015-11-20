@@ -3,7 +3,8 @@ Template.Student.helpers({
   /**
    * @returns {*} All of the Student documents.
    */
-  studentList: function () {
+  currentStudent: function () {
+
     return Student.find();
   }
 });

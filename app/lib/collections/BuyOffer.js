@@ -54,6 +54,7 @@ BuyOffer.attachSchema(new SimpleSchema({
   isbn: {
     label: "ISBN",
     type: String,
+    allowedValues:[],
     optional: false,
     max: 20,
     autoform: {

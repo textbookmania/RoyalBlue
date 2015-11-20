@@ -7,6 +7,8 @@ var buyOfferSeeds = [
   {isbn: "2", condition: "poor",offer: 2}
 ];
 
+
+
 /**
  * Initialize the BuyOffer collection if empty with seed data.
  */
