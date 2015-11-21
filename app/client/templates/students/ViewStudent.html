@@ -1,35 +1,17 @@
 <template name="ViewStudent">
-  <h1>List all Students</h1>
+  <h1>View Profile</h1>
   {{#IfLoggedIn}}
-    <div class="well">
+  <div class="well">
 
-      <table class="table">
-        <thead>
-        <tr>
-          <th>Picture</th>
-          <th>First</th>
-          <th>Last</th>
-          <td>Email</td>
-          <td>Email notifications</td>
-          <th>Edit</th>
+    {{#each currentStudent}}
+    <p>Name: {{first}} {{last}}</p>
+    <p>UHID: {{email}}</p>
+    <p>email: {{email}}@hawaii.edu</p>
+    <p>Email notifications {{send}}</p>
+    <p><a href="{{pathFor 'EditStudent'}}" class="btn">Edit</a></p>
 
-        </tr>
-        </thead>
 
-        <tbody>
-        {{#each currentStudent}}
-          <tr>
-            <th>picture</th>
-            <td>{{firstName}}</td>
-            <td>{{lastName}}</td>
-            <td>{{email}}</td>
-            <td>{{send}}</td>
-            <td><a href="{{pathFor 'EditCurrentStudent'}}">Edit</a></td>
-
-          </tr>
-        {{/each}}
-        </tbody>
-      </table>
-    </div>
+    {{/each}}
+  </div>
   {{/IfLoggedIn}}
 </template>

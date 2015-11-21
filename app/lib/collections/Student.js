@@ -11,8 +11,15 @@ Meteor.methods({
    */
   addStudent: function(doc) {
     //remove @hawaii.edu
-    //doc.email.indexOf('@');
-
+    if(doc.email.indexOf('@') > -1){
+      doc.email = doc.email.slice(0,doc.email.indexOf('@'));
+    }
+    console.log(Meteor.settings.allowed_users);
+    //insert into allowed users if not already
+    if(!_.contains(Meteor.settings.allowed_users, doc.email)) {
+      Meteor.settings.allowed_users[Meteor.settings.allowed_users.length] = doc.email;
+    }
+    console.log(Meteor.settings.allowed_users);
     check(doc, Student.simpleSchema());
     Student.insert(doc);
   },
@@ -23,7 +30,6 @@ Meteor.methods({
    * @param docID It's ID.
    */
   editStudent: function(doc, docID) {
-    doc["email"] = Meteor.user().profile.name;
     check(doc, Student.simpleSchema());
     Student.update({_id: docID}, doc);
   },
@@ -48,32 +54,31 @@ if (Meteor.isServer) {
  */
 Student.attachSchema(new SimpleSchema({
   first: {
-    label: "First",
+    label: "First Name",
     type: String,
-    optional: true,
+    optional: false,
     max: 20,
     autoform: {
       group: student,
-      placeholder: "First Name"
+      placeholder: "first"
     }
   },
   last: {
     label: "Last Name",
     type: String,
-    optional: true,
+    optional: false,
     max: 20,
     autoform: {
       group: student,
-      placeholder: "Last Name"
+      placeholder: "last"
     }
   },
   email: {
-    label: "Email",
+    label: "UHID",
     type: String,
     optional: false,
     max: 20,
     autoform: {
-      type: "hidden",
       group: student,
       placeholder: "0"
     }

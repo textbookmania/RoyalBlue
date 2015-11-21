@@ -5,7 +5,7 @@ Template.ViewStudent.helpers({
    */
   currentStudent: function () {
 
-    return Student.find();
+    return Student.find({ email: Meteor.user().profile.name });
   }
 });
 

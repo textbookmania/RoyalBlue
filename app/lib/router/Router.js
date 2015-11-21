@@ -62,8 +62,12 @@ Router.route('/matches',{
   name: 'Matches'
 });
 
-Router.route('/addStudent',{
+Router.route('/addStudent', {
   name: 'AddStudent'
+});
+
+Router.route('/viewStudent', {
+  name: 'ViewStudent'
 });
 
 Router.route('/textbooks/:_id', {
@@ -79,4 +83,9 @@ Router.route('/listBuyOffer/:_id', {
 Router.route('/listSellOffer/:_id', {
   name: 'EditSellOffer',
   data: function() { return SellOffer.findOne(this.params._id); }
+});
+
+Router.route('/viewStudent/:_id', {
+  name: 'EditStudent',
+  data: function() { return Student.findOne(this.params._id); }
 });

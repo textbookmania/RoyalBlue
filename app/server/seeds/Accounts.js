@@ -1,16 +1,18 @@
-/*
-var studentSeeds = [
-  {first:"Normal", last:"User",email:"normal@example.com",send:false,roles:[]},
-  {first:"Admin", last:"User",email:"admin@example.com",send:false,roles:['admin']}
+var StudentSeeds = [
+  {first: "3",last: "good",email:"0"},
+  {first: "2",last: "poor",email:"0"}
 ];
 
 
+
+/**
+ * Initialize the BuyOffer collection if empty with seed data.
+ */
 if (Student.find().count() === 0) {
-  _.each(studentSeeds,  function(student) {
+  _.each(StudentSeeds,  function(student) {
     Student.insert(student);
   });
-};
-*/
+}
 
 
 /* Validate username, sending a specific error message on failure. */
@@ -20,7 +22,7 @@ Accounts.validateNewUser(function (user) {
     var username = user.services.cas.id;
     if (username && _.contains(Meteor.settings.allowed_users, username)) {
 
-      //if (username && _.contains(Meteor.settings.admin_users, username)) {Roles.addUsersToRoles(Meteor.user(), 'admin');
+      //if (username && _.contains(Meteor.settings.admin_users, username)) {Roles.addUsersToRoles(Meteor.user(), 'admin');}
 
       return true;
     }
