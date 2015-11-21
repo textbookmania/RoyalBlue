@@ -1,5 +1,5 @@
 var StudentSeeds = [
-  {first: "3",last: "good",email:"0"},
+  {first: "3",last: "good",email:"admin"},
   {first: "2",last: "poor",email:"0"}
 ];
 
@@ -21,8 +21,10 @@ Accounts.validateNewUser(function (user) {
 
     var username = user.services.cas.id;
     if (username && _.contains(Meteor.settings.allowed_users, username)) {
-
-      //if (username && _.contains(Meteor.settings.admin_users, username)) {Roles.addUsersToRoles(Meteor.user(), 'admin');}
+      // admin roles not working
+      //if (username && _.contains(Meteor.settings.admin_users, username)) {
+      //  Roles.addUsersToRoles(user.userId(), 'admin');
+      //}
 
       return true;
     }

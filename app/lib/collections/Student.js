@@ -7,19 +7,27 @@ Student = new Mongo.Collection(student);
 Meteor.methods({
   /**
    * Invoked by AutoForm to add a new Student record.
-   * @param doc The Textbooks document.
+   * @param doc The Student document.
    */
   addStudent: function(doc) {
+
     //remove @hawaii.edu
     if(doc.email.indexOf('@') > -1){
       doc.email = doc.email.slice(0,doc.email.indexOf('@'));
     }
-    console.log(Meteor.settings.allowed_users);
-    //insert into allowed users if not already
-    if(!_.contains(Meteor.settings.allowed_users, doc.email)) {
-      Meteor.settings.allowed_users[Meteor.settings.allowed_users.length] = doc.email;
+
+    //stop duplicate emails
+    if(_.findWhere(Student.find().fetch(),{email: doc.email})){
+      if(Meteor.isClient){alert("UHID already exists, try logging in.");}
+      return;
     }
-    console.log(Meteor.settings.allowed_users);
+    if (Meteor.isServer) {
+      //insert into allowed_users
+      if (!_.contains(Meteor.settings.allowed_users, doc.email)) {
+        Meteor.settings.allowed_users.push(doc.email);
+      }
+    }
+
     check(doc, Student.simpleSchema());
     Student.insert(doc);
   },
