@@ -2,7 +2,16 @@ student = "Student";  // avoid typos, this string occurs many times.
 
 Student = new Mongo.Collection(student);
 
-
+/*
+ *Adds user to admin role if in admin_user list
+ *
+ */
+Accounts.onLogin(function(){
+  console.log(Meteor.user().profile.name);
+  if (Meteor.user().profile.name && _.contains(Meteor.settings.admin_users, Meteor.user().profile.name)) {
+    Roles.addUsersToRoles(Meteor.userId(), 'admin');
+  }
+});
 
 Meteor.methods({
   /**
