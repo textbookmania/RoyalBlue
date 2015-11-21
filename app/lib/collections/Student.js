@@ -4,20 +4,11 @@ Student = new Mongo.Collection(student);
 
 /*
  * Adds user to admin role if in admin_user list on login
- * also checks if matching student record has userId, sets if none.
  *
  */
 Accounts.onLogin(function () {
   if (Meteor.user().profile.name && _.contains(Meteor.settings.admin_users, Meteor.user().profile.name)) {
     Roles.addUsersToRoles(Meteor.userId(), 'admin');
-  }
-
-  //add userId to student profile
-  var studentRecord = _.findOne(_.each(Student, function (record) {
-    return record.email;
-  }), Meteor.user().profile.name);
-  if (!studentRecord.owner) {
-    studentRecord.owner = Meteor.userId();
   }
 });
 
