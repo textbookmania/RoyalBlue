@@ -23,7 +23,9 @@ Accounts.validateNewUser(function (user) {
 
     var username = user.services.cas.id;
     if (username && _.contains(Meteor.settings.allowed_users, username)) {
-
+      if (!_.contains(Meteor.settings.banned_users, user.services.cas.id)) {
+        throw new Meteor.Error(0, "Contact admin");
+      }
 
       return true;
     }
