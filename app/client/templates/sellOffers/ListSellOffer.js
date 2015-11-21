@@ -1,10 +1,10 @@
 Template.ListSellOffer.helpers({
 
   /**
-   * @returns {*} All of the Textbooks documents.
+   * @returns {*} All of the sell offer documents owned by current user.
    */
   sellOfferList: function () {
-    return SellOffer.find();
+    return SellOffer.find({ owner: Meteor.user().profile.name });
   }
 });
 

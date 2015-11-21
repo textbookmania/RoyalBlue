@@ -1,4 +1,4 @@
-Template.Student.helpers({
+Template.ViewStudent.helpers({
 
   /**
    * @returns {*} All of the Student documents.
@@ -9,7 +9,7 @@ Template.Student.helpers({
   }
 });
 
-Template.Student.events({
+Template.ViewStudent.events({
   'click .delete': function(e){
     e.preventDefault();
     if (confirm("Delete this student??")) {

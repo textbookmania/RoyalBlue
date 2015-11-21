@@ -8,7 +8,8 @@ Router.configure({
   layoutTemplate: 'Layout',
   loadingTemplate: 'Loading',
   waitOn: function() {
-    return [Meteor.subscribe("Textbooks"), Meteor.subscribe("BuyOffer"), Meteor.subscribe("SellOffer"), Meteor.subscribe("Student")]
+    return [Meteor.subscribe("Textbooks"), Meteor.subscribe("BuyOffer"),
+      Meteor.subscribe("SellOffer"), Meteor.subscribe("Student")]
   }
 
 });
@@ -59,6 +60,10 @@ Router.route('/addSellOffer',{
 
 Router.route('/matches',{
   name: 'Matches'
+});
+
+Router.route('/addStudent',{
+  name: 'AddStudent'
 });
 
 Router.route('/textbooks/:_id', {

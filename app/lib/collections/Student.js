@@ -10,6 +10,9 @@ Meteor.methods({
    * @param doc The Textbooks document.
    */
   addStudent: function(doc) {
+    //remove @hawaii.edu
+    //doc.email.indexOf('@');
+
     check(doc, Student.simpleSchema());
     Student.insert(doc);
   },
@@ -20,6 +23,7 @@ Meteor.methods({
    * @param docID It's ID.
    */
   editStudent: function(doc, docID) {
+    doc["email"] = Meteor.user().profile.name;
     check(doc, Student.simpleSchema());
     Student.update({_id: docID}, doc);
   },

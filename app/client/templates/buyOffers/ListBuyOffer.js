@@ -1,10 +1,10 @@
 Template.ListBuyOffer.helpers({
 
   /**
-   * @returns {*} All of the Textbooks documents.
+   * @returns {*} All of the buyOffer documents of current user.
    */
   buyOfferList: function () {
-    return BuyOffer.find();
+    return BuyOffer.find({ owner: Meteor.user().profile.name });
   }
 });
 

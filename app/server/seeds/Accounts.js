@@ -1,3 +1,4 @@
+/*
 var studentSeeds = [
   {first:"Normal", last:"User",email:"normal@example.com",send:false,roles:[]},
   {first:"Admin", last:"User",email:"admin@example.com",send:false,roles:['admin']}
@@ -9,16 +10,18 @@ if (Student.find().count() === 0) {
     Student.insert(student);
   });
 };
-
+*/
 
 
 /* Validate username, sending a specific error message on failure. */
 Accounts.validateNewUser(function (user) {
-
   if (user) {
+
     var username = user.services.cas.id;
     if (username && _.contains(Meteor.settings.allowed_users, username)) {
-      Roles.addUsersToRoles(username, 'admin');
+
+      //if (username && _.contains(Meteor.settings.admin_users, username)) {Roles.addUsersToRoles(Meteor.user(), 'admin');
+
       return true;
     }
 
