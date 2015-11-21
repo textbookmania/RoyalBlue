@@ -15,16 +15,15 @@ if (Student.find().count() === 0) {
 }
 
 
+
+
 /* Validate username, sending a specific error message on failure. */
 Accounts.validateNewUser(function (user) {
   if (user) {
 
     var username = user.services.cas.id;
     if (username && _.contains(Meteor.settings.allowed_users, username)) {
-      // admin roles not working
-      //if (username && _.contains(Meteor.settings.admin_users, username)) {
-      //  Roles.addUsersToRoles(user.userId(), 'admin');
-      //}
+
 
       return true;
     }
