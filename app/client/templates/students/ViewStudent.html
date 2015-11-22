@@ -4,13 +4,16 @@
   <div class="well">
 
     {{#each currentStudent}}
+    {{#if image}}
+    <img class="userImage" src="{{image}}">
+    {{else}}
+    <i class="fa fa-user userImage"></i>
+    {{/if}}
     <p>Name: {{first}} {{last}}</p>
     <p>UHID: {{email}}</p>
     <p>email: {{email}}@hawaii.edu</p>
     <p>Email notifications: {{#if send}}Yes{{else}}No{{/if}}</p>
     <p><a href="{{pathFor 'EditStudent'}}" class="btn">Edit</a></p>
-
-
     {{/each}}
   </div>
   {{/IfLoggedIn}}

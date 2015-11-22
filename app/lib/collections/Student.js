@@ -25,7 +25,7 @@ Meteor.methods({
     }
 
     //stop duplicate emails
-    if (_.findOne(Student.find().fetch(), {email: doc.email})) {
+    if (_.findWhere(Student.find().fetch(), {email: doc.email})) {
       if (Meteor.isClient) {
         alert("UHID already exists, try logging in.");
       }
@@ -39,7 +39,7 @@ Meteor.methods({
     }
 
     check(doc, Student.simpleSchema());
-    Student.insert(doc, docID);
+    Student.insert(doc);
   },
 
   /**
@@ -121,6 +121,15 @@ Student.attachSchema(new SimpleSchema({
     autoform: {
       group: student,
       placeholder: "0"
+    }
+  },
+  image: {
+    label: "Image URL",
+    type: String,
+    optional: true,
+    autoform: {
+      group: student,
+      placeholder: "image.com"
     }
   }
 }));
