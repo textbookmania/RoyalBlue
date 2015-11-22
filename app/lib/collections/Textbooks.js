@@ -8,6 +8,7 @@ Meteor.methods({
    * @param doc The Textbooks document.
    */
   addTextbooks: function(doc) {
+    doc.image = "images.amazon.com/images/P/"+ doc.isbn +".01.jpg";
     check(doc, Textbooks.simpleSchema());
     Textbooks.insert(doc);
   },
@@ -67,6 +68,7 @@ Textbooks.attachSchema(new SimpleSchema({
     optional: true,
     max: 100,
     autoform: {
+      type: "hidden",
       group: textbooks,
       placeholder: "image.org"
     }

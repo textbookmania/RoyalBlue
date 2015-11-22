@@ -8,6 +8,7 @@ Meteor.methods({
    * @param doc The Textbooks document.
    */
   addBuyOffer: function(doc) {
+    doc["owner"] = Meteor.user().profile.name;
     check(doc, BuyOffer.simpleSchema());
     BuyOffer.insert(doc);
   },
@@ -54,6 +55,7 @@ BuyOffer.attachSchema(new SimpleSchema({
   isbn: {
     label: "ISBN",
     type: String,
+    allowedValues:["1","2","3"],
     optional: false,
     max: 20,
     autoform: {
@@ -87,17 +89,28 @@ BuyOffer.attachSchema(new SimpleSchema({
     optional: true,
     max: 100,
     autoform: {
+      type: "hidden",
       group: buyOffer,
       placeholder: "image.org"
     }
   },
   expires: {
-    type: String,
+    type: Date,
     optional: true,
     autoform: {
       type: "hidden",
       group: buyOffer,
       placeholder: "0"
+    }
+  },
+  owner: {
+    label: "Owner",
+    type: String,
+    optional: true,
+    autoform: {
+      type: "hidden",
+      group: buyOffer,
+      placeholder: ""
     }
   }
 

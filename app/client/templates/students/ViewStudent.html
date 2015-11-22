@@ -1,0 +1,17 @@
+<template name="ViewStudent">
+  <h1>View Profile</h1>
+  {{#IfLoggedIn}}
+  <div class="well">
+
+    {{#each currentStudent}}
+    <p>Name: {{first}} {{last}}</p>
+    <p>UHID: {{email}}</p>
+    <p>email: {{email}}@hawaii.edu</p>
+    <p>Email notifications: {{#if send}}Yes{{else}}No{{/if}}</p>
+    <p><a href="{{pathFor 'EditStudent'}}" class="btn">Edit</a></p>
+
+
+    {{/each}}
+  </div>
+  {{/IfLoggedIn}}
+</template>

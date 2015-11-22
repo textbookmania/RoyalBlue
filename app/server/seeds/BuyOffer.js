@@ -3,9 +3,11 @@
  * @type {*[]}
  */
 var buyOfferSeeds = [
-  {isbn: "3", condition: "good",offer: 1},
-  {isbn: "2", condition: "poor",offer: 2}
+  {isbn: "3", condition: "good",offer: 1,owner:"0"},
+  {isbn: "2", condition: "poor",offer: 2,owner:"0"}
 ];
+
+
 
 /**
  * Initialize the BuyOffer collection if empty with seed data.

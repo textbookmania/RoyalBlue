@@ -8,7 +8,8 @@ Router.configure({
   layoutTemplate: 'Layout',
   loadingTemplate: 'Loading',
   waitOn: function() {
-    return [Meteor.subscribe("Textbooks"), Meteor.subscribe("BuyOffer"), Meteor.subscribe("SellOffer")]
+    return [Meteor.subscribe("Textbooks"), Meteor.subscribe("BuyOffer"),
+      Meteor.subscribe("SellOffer"), Meteor.subscribe("Student")]
   }
 
 });
@@ -61,6 +62,14 @@ Router.route('/matches',{
   name: 'Matches'
 });
 
+Router.route('/addStudent', {
+  name: 'AddStudent'
+});
+
+Router.route('/viewStudent', {
+  name: 'ViewStudent'
+});
+
 Router.route('/textbooks/:_id', {
   name: 'EditTextbooks',
   data: function() { return Textbooks.findOne(this.params._id); }
@@ -74,4 +83,9 @@ Router.route('/listBuyOffer/:_id', {
 Router.route('/listSellOffer/:_id', {
   name: 'EditSellOffer',
   data: function() { return SellOffer.findOne(this.params._id); }
+});
+
+Router.route('/viewStudent/:_id', {
+  name: 'EditStudent',
+  data: function() { return Student.findOne(this.params._id); }
 });

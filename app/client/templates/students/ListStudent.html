@@ -1,0 +1,37 @@
+<template name="ListStudent">
+  <h1>List all Students</h1>
+  {{#IfLoggedIn}}
+  {{#if isInRole 'admin'}}
+    <div class="well">
+
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Picture</th>
+          <th>First</th>
+          <th>Last</th>
+          <td>Email</td>
+          <th>Edit</th>
+          <th>Delete</th>
+
+        </tr>
+        </thead>
+
+        <tbody>
+        {{#each studentList}}
+          <tr>
+            <th>picture</th>
+            <td>{{firstName}}</td>
+            <td>{{lastName}}</td>
+            <td>{{email}}</td>
+            <td><a href="{{pathFor 'EditStudent'}}">Edit</a></td>
+            <td><a class="delete" href="#">Delete</a></td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+
+    </div>
+  {{/if}}
+  {{/IfLoggedIn}}
+</template>

@@ -4,7 +4,10 @@ Template.Matches.helpers({
    * @returns {*} All of the documents matching current users sell/buy offers.
    */
   findMatches: function () {
-    return BuyOffer.find(); //SellOffer.find();
+    var  myBuyOffer = BuyOffer.find({ owner: Meteor.user().profile.name });
+    var mySellOffer = SellOffer.find({ owner: Meteor.user().profile.name });
+    return myBuyOffer;
+
   }
 });
 
