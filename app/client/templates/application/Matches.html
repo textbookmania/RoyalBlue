@@ -1,40 +1,77 @@
 <template name="Matches">
   <div class="container">
-    <div class="well">
-      <h1>List of all matching orders to sell/buy offers</h1>
-      {{#IfLoggedIn}}
+    <h1>Matches</h1>
 
 
-        <table class="table">
-          <thead>
-          <tr>
-            <th>picture</th>
-            <th>Description</th>
-            <th>ISBN</th>
-            <th>Condition</th>
-            <th>Offer</th>
-            <th>Expires</th>
-            <th>Accept Offer</th>
-          </tr>
-          </thead>
+    {{#IfLoggedIn}}
+    <div class="col-sm-6 well">
+      <table class="table">
+        <caption>Sell Offer Matches</caption>
+        <thead>
+        <tr>
+          <th>picture</th>
+          <th>ISBN</th>
+          <th>Condition</th>
+          <th>Offer</th>
+          <th>Expires</th>
+          <th>Accept Offer</th>
+        </tr>
+        </thead>
 
-          <tbody>
-          {{#each findMatches}}
-          <tr>
-            <td>picture</td>
-            <td>{{description}}</td>
-            <td>{{isbn}}</td>
-            <td>{{condition}}</td>
-            <td>{{offer}}</td>
-            <td>{{expire}}</td>
-            <td><a class="accept" href="#">Accept</a></td>
-          </tr>
-          {{/each}}
-          </tbody>
-        </table>
-
-
-      {{/IfLoggedIn}}
+        <tbody>
+        {{#each findSellMatches}}
+        <tr>
+          {{#if image}}
+          <td><img class="textbookImage" src="{{image}}"></td>
+          {{else}}
+          <td><i class="fa fa-book textbookImage"></i></td>
+          {{/if}}
+          <td>{{isbn}}</td>
+          <td>{{condition}}</td>
+          <td>{{offer}}</td>
+          <td>{{expire}}</td>
+          <td><a class="accept" href="#">Accept</a></td>
+        </tr>
+        {{/each}}
+        </tbody>
+      </table>
     </div>
+    <div class="col-sm-6 well">
+
+      <table class="table">
+        <caption>Buy Offer Matches</caption>
+        <thead>
+        <tr>
+          <th>picture</th>
+          <th>ISBN</th>
+          <th>Condition</th>
+          <th>Offer</th>
+          <th>Expires</th>
+          <th>Accept Offer</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {{#each findBuyMatches}}
+        <tr>
+          {{#if image}}
+          <td><img class="textbookImage" src="{{image}}"></td>
+          {{else}}
+          <td><i class="fa fa-book textbookImage"></i></td>
+          {{/if}}
+          <td>{{isbn}}</td>
+          <td>{{condition}}</td>
+          <td>{{offer}}</td>
+          <td>{{expire}}</td>
+          <td><a class="accept" href="#">Accept</a></td>
+        </tr>
+
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+
+    {{/IfLoggedIn}}
   </div>
 </template>

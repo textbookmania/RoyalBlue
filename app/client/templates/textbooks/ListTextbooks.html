@@ -20,7 +20,11 @@
         <tbody>
         {{#each textbooksList}}
           <tr>
-            <td><img src="{{image}}"></td>
+            {{#if image}}
+            <td><img class="textbookImage" src="{{image}}"></td>
+            {{else}}
+            <td><i class="fa fa-book textbookImage"></i></td>
+            {{/if}}
             <td>{{title}}</td>
             <td>{{author}}</td>
             <td>{{isbn}}</td>

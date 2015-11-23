@@ -50,7 +50,7 @@ Textbooks.attachSchema(new SimpleSchema({
     max: 20,
     autoform: {
       group: textbooks,
-      placeholder: "Foo"
+      placeholder: "title"
     }
   },
   title: {
@@ -63,6 +63,16 @@ Textbooks.attachSchema(new SimpleSchema({
       placeholder: "Foo"
     }
   },
+  author: {
+    label: "Author",
+    type: String,
+    optional: false,
+    max: 20,
+    autoform: {
+      group: textbooks,
+      placeholder: "author"
+    }
+  },
   isbn: {
     label: "ISBN",
     type: String,
@@ -70,7 +80,7 @@ Textbooks.attachSchema(new SimpleSchema({
     max: 20,
     autoform: {
       group: textbooks,
-      placeholder: "0000000000"
+      placeholder: "isbn number"
     }
   },
   image: {
@@ -81,7 +91,7 @@ Textbooks.attachSchema(new SimpleSchema({
     autoform: {
       type: "hidden",
       group: textbooks,
-      placeholder: "image.org"
+      placeholder: "image"
     }
   }
 

@@ -21,7 +21,11 @@
         <tbody>
         {{#each sellOfferList}}
           <tr>
-            <td>picture</td>
+            {{#if image}}
+            <td><img class="textbookImage" src="{{image}}"></td>
+            {{else}}
+            <td><i class="fa fa-book textbookImage"></i></td>
+            {{/if}}
             <td>{{description}}</td>
             <td>{{isbn}}</td>
             <td>{{condition}}</td>
