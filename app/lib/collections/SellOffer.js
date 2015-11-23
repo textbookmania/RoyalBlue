@@ -7,8 +7,9 @@ Meteor.methods({
    * Invoked by AutoForm to add a new SellOffer record.
    * @param doc The Textbooks document.
    */
-  addSellOffer: function(doc) {
-    doc["owner"] = Meteor.user().profile.name;
+  addSellOffer: function (doc) {
+    doc.image = "images.amazon.com/images/P/" + doc.isbn + ".01.jpg";
+    doc.owner = Meteor.user().profile.name;
     check(doc, SellOffer.simpleSchema());
     SellOffer.insert(doc);
   },
@@ -18,12 +19,12 @@ Meteor.methods({
    * @param doc The Textbooks document.
    * @param docID It's ID.
    */
-  editSellOffer: function(doc, docID) {
+  editSellOffer: function (doc, docID) {
     check(doc, SellOffer.simpleSchema());
     SellOffer.update({_id: docID}, doc);
   },
 
-  deleteSellOffer: function(docID){
+  deleteSellOffer: function (docID) {
     SellOffer.remove(docID);
   }
 });
@@ -35,28 +36,18 @@ if (Meteor.isServer) {
   });
 }
 
-
 /**
  * Create the schema for SellOffer
  * See: https://github.com/aldeed/meteor-autoform#common-questions
  * See: https://github.com/aldeed/meteor-autoform#affieldinput
  */
 SellOffer.attachSchema(new SimpleSchema({
-  description: {
-    label: "Decsription",
-    type: String,
-    optional: true,
-    max: 20,
-    autoform: {
-      group: sellOffer,
-      placeholder: "Bar"
-    }
-  },
+
   isbn: {
     label: "ISBN",
     type: String,
     optional: false,
-    allowedValues:["1","2","3"],
+    allowedValues: ["1", "2", "3"],
     max: 20,
     autoform: {
       group: sellOffer,
@@ -93,7 +84,17 @@ SellOffer.attachSchema(new SimpleSchema({
       placeholder: "image.org"
     }
   },
-  expires: {
+  expired: {
+    label: "L",
+    type: Boolean,
+    optional: true,
+    autoform: {
+      type: "hidden",
+      group: sellOffer,
+      placeholder: ""
+    }
+  },
+  created: {
     type: Date,
     optional: true,
     autoform: {

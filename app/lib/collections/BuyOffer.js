@@ -8,7 +8,8 @@ Meteor.methods({
    * @param doc The Textbooks document.
    */
   addBuyOffer: function(doc) {
-    doc["owner"] = Meteor.user().profile.name;
+    doc.image = "images.amazon.com/images/P/"+ doc.isbn +".01.jpg";
+    doc.owner = Meteor.user().profile.name;
     check(doc, BuyOffer.simpleSchema());
     BuyOffer.insert(doc);
   },
@@ -42,16 +43,7 @@ if (Meteor.isServer) {
  * See: https://github.com/aldeed/meteor-autoform#affieldinput
  */
 BuyOffer.attachSchema(new SimpleSchema({
-  description: {
-    label: "Decsription",
-    type: String,
-    optional: true,
-    max: 20,
-    autoform: {
-      group: buyOffer,
-      placeholder: "Foo"
-    }
-  },
+
   isbn: {
     label: "ISBN",
     type: String,
@@ -94,7 +86,17 @@ BuyOffer.attachSchema(new SimpleSchema({
       placeholder: "image.org"
     }
   },
-  expires: {
+  expired: {
+    label: "7",
+    type: Boolean,
+    optional: true,
+    autoform: {
+      type: "hidden",
+      group: buyOffer,
+      placeholder: ""
+    }
+  },
+  created: {
     type: Date,
     optional: true,
     autoform: {

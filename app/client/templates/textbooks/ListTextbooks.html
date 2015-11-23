@@ -8,6 +8,7 @@
         <tr>
           <th>Picture</th>
           <th>Title</th>
+          <th>Author</th>
           <th>ISBN</th>
           {{#if isInRole 'admin'}}
           <th>Edit</th>
@@ -19,8 +20,13 @@
         <tbody>
         {{#each textbooksList}}
           <tr>
-            <th>picture</th>
+            {{#if image}}
+            <td><img class="textbookImage" src="{{image}}"></td>
+            {{else}}
+            <td><i class="fa fa-book textbookImage"></i></td>
+            {{/if}}
             <td>{{title}}</td>
+            <td>{{author}}</td>
             <td>{{isbn}}</td>
             {{#if isInRole 'admin'}}
             <td><a href="{{pathFor 'EditTextbooks'}}">Edit</a></td>
