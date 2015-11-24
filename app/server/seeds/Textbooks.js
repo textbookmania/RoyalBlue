@@ -3,8 +3,8 @@
  * @type {*[]}
  */
 var textbooksSeeds = [
-  {title: "Basket", isbn: 3},
-  {title: "Bicycle", isbn: 2}
+  {title: "Basket", author: "A", isbn: 3},
+  {title: "Bicycle", author: "B", isbn: 2}
 ];
 
 /**
