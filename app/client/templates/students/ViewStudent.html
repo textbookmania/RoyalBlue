@@ -1,0 +1,29 @@
+<template name="ViewStudent">
+  <h1>View Profile</h1>
+  {{#IfLoggedIn}}
+  {{#each currentStudent}}
+  <div class="container">
+    <div class="col-sm-2">
+      <div class="well">
+      {{#if image}}
+      <img class="userImage img-rounded" src="{{image}}">
+      {{else}}
+      <i class="fa fa-user userImage"></i>
+      {{/if}}
+    </div>
+    </div>
+    <div class="col-sm-10"><div class="well">
+      <p>Name: {{first}} {{last}}</p>
+
+      <p>UHID: {{email}}</p>
+
+      <p>email: {{email}}@hawaii.edu</p>
+
+      <p>Email notifications: {{#if send}}Yes{{else}}No{{/if}}</p>
+
+      <p><a href="{{pathFor 'EditStudent'}}" class="btn">Edit</a></p>
+    </div></div>
+  </div>
+  {{/each}}
+  {{/IfLoggedIn}}
+</template>

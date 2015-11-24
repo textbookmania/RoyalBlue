@@ -11,7 +11,8 @@
           <th>ISBN</th>
           <th>Condition</th>
           <th>Offer</th>
-          <td>Expires</td>
+          <th>Expires</th>
+
           <th>Edit</th>
           <th>Delete</th>
         </tr>
@@ -20,14 +21,20 @@
         <tbody>
         {{#each sellOfferList}}
           <tr>
-            <td>picture</td>
+            {{#if image}}
+            <td><img class="textbookImage" src="{{image}}"></td>
+            {{else}}
+            <td><i class="fa fa-book textbookImage"></i></td>
+            {{/if}}
             <td>{{description}}</td>
             <td>{{isbn}}</td>
-            <th>{{condition}}</th>
-            <th>{{offer}}</th>
+            <td>{{condition}}</td>
+            <td>{{offer}}</td>
             <td>{{expire}}</td>
+
             <td><a href="{{pathFor 'EditSellOffer'}}">Edit</a></td>
             <td><a class="delete" href="#">Delete</a></td>
+
           </tr>
         {{/each}}
         </tbody>

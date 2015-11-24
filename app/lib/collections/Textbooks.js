@@ -8,6 +8,7 @@ Meteor.methods({
    * @param doc The Textbooks document.
    */
   addTextbooks: function(doc) {
+    doc.image = "images.amazon.com/images/P/"+ doc.isbn +".01.jpg";
     check(doc, Textbooks.simpleSchema());
     Textbooks.insert(doc);
   },
@@ -18,6 +19,7 @@ Meteor.methods({
    * @param docID It's ID.
    */
   editTextbooks: function(doc, docID) {
+    doc.image = "images.amazon.com/images/P/"+ doc.isbn +".01.jpg";
     check(doc, Textbooks.simpleSchema());
     Textbooks.update({_id: docID}, doc);
   },
@@ -48,7 +50,27 @@ Textbooks.attachSchema(new SimpleSchema({
     max: 20,
     autoform: {
       group: textbooks,
+      placeholder: "title"
+    }
+  },
+  title: {
+    label: "Title",
+    type: String,
+    optional: false,
+    max: 20,
+    autoform: {
+      group: textbooks,
       placeholder: "Foo"
+    }
+  },
+  author: {
+    label: "Author",
+    type: String,
+    optional: false,
+    max: 20,
+    autoform: {
+      group: textbooks,
+      placeholder: "author"
     }
   },
   isbn: {
@@ -58,7 +80,7 @@ Textbooks.attachSchema(new SimpleSchema({
     max: 20,
     autoform: {
       group: textbooks,
-      placeholder: "0000000000"
+      placeholder: "isbn number"
     }
   },
   image: {
@@ -67,8 +89,9 @@ Textbooks.attachSchema(new SimpleSchema({
     optional: true,
     max: 100,
     autoform: {
+      type: "hidden",
       group: textbooks,
-      placeholder: "image.org"
+      placeholder: "image"
     }
   }
 
