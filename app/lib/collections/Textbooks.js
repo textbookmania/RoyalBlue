@@ -19,7 +19,7 @@ Meteor.methods({
    * @param docID It's ID.
    */
   editTextbooks: function(doc, docID) {
-    doc.image = "images.amazon.com/images/P/"+ doc.isbn +".01.jpg";
+    //doc.image = "images.amazon.com/images/P/"+ doc.isbn +".01.jpg";
     check(doc, Textbooks.simpleSchema());
     Textbooks.update({_id: docID}, doc);
   },
