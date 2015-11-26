@@ -7,7 +7,7 @@ Template.Matches.helpers({
     var mySellOffer = SellOffer.find({ owner: Meteor.user().profile.name }).fetch();
     var sellOfferMatches=[];
     _.each(mySellOffer, function(rec){
-      sellOfferMatches = sellOfferMatches.concat(BuyOffer.find({isbn: rec.isbn, expired: 'false'}).fetch());
+      sellOfferMatches = sellOfferMatches.concat(BuyOffer.find({isbn: rec.isbn}).fetch());
     });
     return sellOfferMatches;
 
@@ -16,7 +16,7 @@ Template.Matches.helpers({
     var myBuyOffer = BuyOffer.find({owner: Meteor.user().profile.name}).fetch();
     var buyOfferMatches=[];
     _.each(myBuyOffer, function(record){
-      buyOfferMatches = buyOfferMatches.concat(SellOffer.find({isbn: record.isbn, expired: 'false'}).fetch());
+      buyOfferMatches = buyOfferMatches.concat(SellOffer.find({isbn: record.isbn}).fetch());
     });
     return buyOfferMatches;
   }
