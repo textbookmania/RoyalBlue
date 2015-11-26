@@ -53,16 +53,6 @@ Textbooks.attachSchema(new SimpleSchema({
       placeholder: "title"
     }
   },
-  title: {
-    label: "Title",
-    type: String,
-    optional: false,
-    max: 20,
-    autoform: {
-      group: textbooks,
-      placeholder: "Foo"
-    }
-  },
   author: {
     label: "Author",
     type: String,
