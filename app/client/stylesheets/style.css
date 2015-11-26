@@ -20,6 +20,16 @@ body {
 
 .navbar-inverse .navbar-brand{
   color: #dbdbdb;
+  padding-top:0px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  font-family: Ubuntu, sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #E5EDDC;
+  text-align: center;
+  width : 8em;
 }
 
 a {
