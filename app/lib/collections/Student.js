@@ -104,13 +104,13 @@ Student.attachSchema(new SimpleSchema({
     }
   },
   email: {
-    label: "UHID",
+    label: "UH username",
     type: String,
     optional: false,
     max: 20,
     autoform: {
       group: student,
-      placeholder: "0"
+      placeholder: "or UH email"
     }
   },
   send: {
