@@ -8,7 +8,10 @@ Meteor.methods({
    * @param doc The Textbooks document.
    */
   addSellOffer: function (doc) {
-    doc.image = "images.amazon.com/images/P/" + doc.isbn + ".01.jpg";
+    textList=Textbooks.find().fetch();
+    doc.image = _.find(textList, function(record){
+      return record.isbn === doc.isbn;
+    }).image;
     doc.owner = Meteor.user().profile.name;
     check(doc, SellOffer.simpleSchema());
     SellOffer.insert(doc);
@@ -44,12 +47,15 @@ if (Meteor.isServer) {
 SellOffer.attachSchema(new SimpleSchema({
 
   isbn: {
-    label: "ISBN",
+    label: "Book",
     type: String,
     optional: false,
-    allowedValues: ["1", "2", "3"],
-    max: 20,
     autoform: {
+      options: function() {
+        return _.map(Textbooks.find().fetch(), function (record) {
+          return {label: record.title, value: record.isbn};
+        });
+      },
       group: sellOffer,
       placeholder: "0000000000"
     }
@@ -59,7 +65,6 @@ SellOffer.attachSchema(new SimpleSchema({
     type: String,
     allowedValues: ['excellent', 'good', 'fair', 'poor'],
     optional: false,
-    max: 20,
     autoform: {
       group: sellOffer,
       placeholder: "excellent, good, fair, or poor"

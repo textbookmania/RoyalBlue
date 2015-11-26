@@ -2,7 +2,7 @@
  * A list of textbooks to pre-fill the Collection.
  * @type {*[]}
  */
-var textbookSeeds = [
+var textbooksSeeds = [
   {title: "The Art of Computer Programming", author: "Donald E. Knuth", isbn: "978-0321751041", image: "http://images.amazon.com/images/P/0321751043.01.LZ.jpg"},
 
   {title: "Java Concepts", author: "Cay S. HorstMann", isbn: "9780470509470", image: "http://images.amazon.com/images/P/0470509473.01.LZ.jpg"},
