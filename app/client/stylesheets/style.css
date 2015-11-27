@@ -1,5 +1,5 @@
 body {
-  padding-top: 0px;  /* Move body of page below navbar. */
+  padding-top: 81px;  /* Move body of page below navbar. */
   text-align: center;
 }
 
@@ -15,7 +15,7 @@ body {
   background-color: RoyalBlue;
   border-color: royalblue;
   border-radius: 0px;
-  color: white;
+
 }
 
 .navbar-inverse .navbar-brand{
@@ -27,7 +27,7 @@ body {
   font-family: Ubuntu, sans-serif;
   font-size: 1.1em;
   font-weight: bold;
-  color: #E5EDDC;
+  color: #d2dac9;
   text-align: center;
   width : 8em;
 }
@@ -38,7 +38,7 @@ a {
 }
 
 .well {
-  text-align: right;
+  text-align: left;
   color: royalblue;
   border-color: #080808;
   border-width: 3px;
