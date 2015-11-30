@@ -27,8 +27,9 @@ Template.Matches.events({
     e.preventDefault();
     if (confirm("Accept this offer??")) {
       var currentOfferId = this._id;
+      this.expires=(moment());
       Meteor.call("contactOfferOwner", currentOfferId);
-      Router.go('Matches');
+      //Router.go('Matches');
     }
   }
 });
