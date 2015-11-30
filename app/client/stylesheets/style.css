@@ -1,38 +1,27 @@
 body {
-  padding-top: 0px;  /* Move body of page below navbar. */
+  padding-top: 60px;  /* Move body of page below navbar. */
   text-align: center;
-}
-
-.bookHeader {
-  background-image: url("/images/tbm3.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 240px;
+  color: black;
 }
 
 .navbar-inverse {
-  background-color: RoyalBlue;
-  border-color: royalblue;
-  border-radius: 0px;
-  color: white;
-}
-
-.navbar-inverse .navbar-brand{
-  color: #dbdbdb;
+  background-color: royalblue;
+  border: none;
 }
 
 a {
   color: royalblue;
+}
 
+h3 {
+  color: black;
 }
 
 .well {
-  text-align: right;
+  text-align: center;
   color: royalblue;
-  border-color: #080808;
-  border-width: 3px;
-  background-color: white;
+  background: none;
+  border: none;
 }
 
 .studentLogo {
