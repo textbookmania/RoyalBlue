@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/ics-software-engineering/meteor-example-uh-cas/master/doc/meteor-example-uh-cas.png)
+![](https://raw.githubusercontent.com/textbookmania/RoyalBlue/master/app/public/images/logged_in.JPG)
 
 ## Installation
 
