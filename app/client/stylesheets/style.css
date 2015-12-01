@@ -10,7 +10,14 @@ body {
   border: none;
 }
 
-.navbar-brand ul {
+.navbar-inverse .navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 35px;
+  color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  font-size: 15px;
   color: white;
 }
 
@@ -20,7 +27,7 @@ body {
 }
 
 .well h3{
-  color: white;
+  color: royalblue;
 }
 
 h3 {
@@ -67,6 +74,7 @@ p {
 }
 
 .heroImage {
+  padding-top: 20px;
   width: 100%;
   background-size: cover;
   background-position: center;
