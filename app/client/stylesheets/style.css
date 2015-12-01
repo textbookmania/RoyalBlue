@@ -43,6 +43,14 @@ p {
   text-align: left;
 }
 
+.helpPage h2 {
+  color: royalblue;
+}
+
+.helpPage h3 {
+  color: #ec971f;
+}
+
 .studentLogo {
   background-image: url("/images/student.jpg");
   background-size: 30%;
