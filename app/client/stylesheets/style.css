@@ -1,11 +1,11 @@
 body {
   padding-top: 60px;  /* Move body of page below navbar. */
   text-align: center;
-  background-color: white;
+  background-color: black;
 }
 
 .navbar-inverse {
-  background-color: black;
+  background-color: royalblue;
   border: none;
 }
 
@@ -46,8 +46,6 @@ h3 {
 .heroImage {
   background-size: cover;
   background-position: center;
-  width:100%;
-  height: auto;
 
 }
 
