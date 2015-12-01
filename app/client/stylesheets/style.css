@@ -2,12 +2,18 @@ body {
   padding-top: 50px;  /* Move body of page below navbar. */
   text-align: center;
   background-color: black;
+  color: white;
 }
 
 .navbar-inverse {
   background-color: royalblue;
   border: none;
 }
+
+.navbar-brand ul {
+  color: white;
+}
+
 
 .well a{
   color: white;
@@ -30,6 +36,11 @@ h3 {
 
 p {
   color: white;
+}
+
+.helpPage {
+  color: white;
+  text-align: left;
 }
 
 .studentLogo {
