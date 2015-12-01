@@ -1,55 +1,52 @@
 <template name="Home">
 
   {{#if currentUser}}
-  <center><h4>The current user is: {{ currentUser.profile.name }}</h4></center>
+    <center><h4>The current user is: {{ currentUser.profile.name }}</h4></center>
 
   <div class="container">
-    <div class="row">
-      <div class="col-md-12 col-lg-12">
+    <div class="row" >
+      <div class="col-lg-12">
         <div class="well studentLogo">
           <h1><a href="{{ pathFor 'Students' }}">Students</a></h1>
-
           <div class="studentLogo"></div>
           <h4>Connect with other students<br> Make friends!</h4>
 
         </div>
       </div>
-      <div class="col-md-12 col-lg-12">
+      <div class="col-lg-12">
         <div class="well buy">
           <h1><a href="{{ pathFor 'AddBuyOffer' }}">Add/Buy Orders</a></h1>
-
           <div class="buy"></div>
           <h4>Looking for a book? <br>List it here. We'll help find a seller.</h4>
 
         </div>
       </div>
-
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-3 col-md-3 ">
-        <div class="well">
-          <h1><a href="{{ pathFor 'Textbooks' }}">TextBooks</a></h1>
-          <h4>View our current books! Add a book if you don't see what you need!</h4>
-
-        </div>
-      </div>
-      <div class="col-sm-3 col-md-3">
-        <div class="well">
-          <h1><a href="{{ pathFor 'AddSellOffer' }}">Add/Sell Orders</a></h1>
-          <h4>Got used textbooks to sell? List it here.</h4>
-
-        </div>
-      </div>
-      <div class="col-sm-3 col-md-3">
+      <div class="col-lg-3">
         <div class="well">
           <h1><a href="{{ pathFor 'Matches' }}">Matches</a></h1>
           <h4>We'll search our database for potential buyers and sellers.</h4>
 
         </div>
       </div>
-      <div class="col-sm-3 col-md-3 ">
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="well">
+          <h1><a href="{{ pathFor 'Textbooks' }}">TextBooks</a></h1>
+          <h4>View our current books! Add a book if you don't see what you need!</h4>
+
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="well">
+          <h1><a href="{{ pathFor 'AddSellOffer' }}">Add/Sell Orders</a></h1>
+          <h4>Got used textbooks to sell? List it here.</h4>
+
+        </div>
+      </div>
+      <div class="col-lg-3">
         <div class="well">
           <h1><a href="{{ pathFor 'Help' }}">Help</a></h1>
           <h4>We'll do our best to answer your questions.</h4>
@@ -57,16 +54,16 @@
         </div>
       </div>
     </div>
-  </div>
+ </div>
+
 
 
   {{else}}
 
   <h3>You are currently not logged in.
-    Need <a href="{{ pathFor 'Help' }}">help</a>?</h3>
+  Need <a href="{{ pathFor 'Help' }}">help</a>?</h3>
 
   <p>
-
   <div class="homepageImage"></div>
   </p>
   {{/if}}

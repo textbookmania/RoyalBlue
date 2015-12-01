@@ -1,7 +1,6 @@
 body {
-  padding-top: 200px;  /* Move body of page below navbar. */
+  padding-top: 81px;  /* Move body of page below navbar. */
   text-align: center;
-
 }
 
 .bookHeader {
@@ -13,23 +12,23 @@ body {
 }
 
 .navbar-inverse {
-  background-image:url("/images/Shelves.jpg");
+  background-color: RoyalBlue;
+  border-color: royalblue;
   border-radius: 0px;
 
 }
 
-.navbar .navbar-left{
-  margin-left: 0px;
+.navbar-inverse .navbar-brand{
+  color: #dbdbdb;
+  padding-top:0px;
 }
-
-
 
 .navbar-inverse .navbar-nav>li>a {
   font-family: Ubuntu, sans-serif;
   font-size: 1.1em;
   font-weight: bold;
   color: #d2dac9;
-  text-align: right;
+  text-align: center;
   width : 8em;
 }
 
@@ -39,18 +38,17 @@ a {
 }
 
 .well {
-  font-family: Ubuntu, sans-serif;
-  text-align: center;
+  text-align: left;
   color: royalblue;
   border-color: #080808;
-  border-width: 20%;
-  background-size: 100%;
+  border-width: 3px;
+  background-color: white;
 }
 
 .studentLogo {
-  background-image: url("/images/exchange.jpg");
-  background-size: 100%;
-  background-position: center;
+  background-image: url("/images/student.jpg");
+  background-size: 30%;
+  background-position: left;
   background-repeat: no-repeat;
 
 }
