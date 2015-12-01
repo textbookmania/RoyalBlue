@@ -1,7 +1,7 @@
 body {
   padding-top: 60px;  /* Move body of page below navbar. */
   text-align: center;
-  background-color: black;
+  background-color: white;
 }
 
 .navbar-inverse {
