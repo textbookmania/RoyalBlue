@@ -74,7 +74,10 @@ p {
 }
 
 .heroImage {
+<<<<<<< HEAD
   padding-top: 20px;
+=======
+>>>>>>> origin/UI-Alternative
   width: 100%;
   background-size: cover;
   background-position: center;
