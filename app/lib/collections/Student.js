@@ -67,6 +67,16 @@ Meteor.methods({
       }
       Student.remove(docID);
     }
+  },
+  /**
+   * email the owner of an offer if that user's notification is set to send email
+   */
+  contactOfferOwner: function(docId, doc){
+    var seller=Student.findOne({email: doc.owner});
+    if(seller.send){window.open("mailto:"+seller.email+"@hawaii.edu");}
+    console.log(doc);
+    check(doc, SellOffer.simpleSchema());
+    SellOffer.update({_id: docId}, doc);
   }
 });
 
