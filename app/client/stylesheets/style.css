@@ -1,38 +1,61 @@
 body {
-  padding-top: 0px;  /* Move body of page below navbar. */
+  padding-top: 50px;  /* Move body of page below navbar. */
   text-align: center;
-}
-
-.bookHeader {
-  background-image: url("/images/tbm3.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 240px;
-}
-
-.navbar-inverse {
-  background-color: RoyalBlue;
-  border-color: royalblue;
-  border-radius: 0px;
+  background-color: black;
   color: white;
 }
 
-.navbar-inverse .navbar-brand{
-  color: #dbdbdb;
+.navbar-inverse {
+  background-color: royalblue;
+  border: none;
 }
 
-a {
-  color: royalblue;
+.navbar-inverse .navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 35px;
+  color: white;
+}
 
+.navbar-inverse .navbar-nav>li>a {
+  font-size: 15px;
+  color: white;
+}
+
+
+.well a{
+  color: white;
+}
+
+.well h3{
+  color: royalblue;
+}
+
+h3 {
+  color: white;
 }
 
 .well {
-  text-align: right;
+  text-align: center;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+p {
+  color: white;
+}
+
+.helpPage {
+  color: white;
+  text-align: left;
+}
+
+.helpPage h2 {
   color: royalblue;
-  border-color: #080808;
-  border-width: 3px;
-  background-color: white;
+}
+
+.helpPage h3 {
+  color: #ec971f;
 }
 
 .studentLogo {
@@ -50,15 +73,27 @@ a {
   background-repeat: no-repeat;
 }
 
-.homepageImage {
-  background-image: url("/images/homeimage2.jpg");
-  height: 400px;
-  background-size: contain;
-  background-repeat: no-repeat;
+.heroImage {
+<<<<<<< HEAD
+  padding-top: 20px;
+=======
+>>>>>>> origin/UI-Alternative
+  width: 100%;
+  background-size: cover;
   background-position: center;
 
 }
 
+.homepageImage {
+  background-image: url("/images/bookwall.jpg");
+  background-size: 400px;
+
+}
+
+.vertical {
+  height: 500px;
+
+}
 
 
 .userImage, .textbookImage{
