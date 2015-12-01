@@ -12,26 +12,38 @@ The settings file is needed to provide CAS parameter information. Note that you 
 
 ## Walkthrough
 
-Meteor-example-uh-cas is a fork of [meteor-application-template](http://ics-software-engineering.github.io/meteor-application-template/) that illustrates how to perform [University of Hawaii CAS authentication](https://www.hawaii.edu/bwiki/display/UHIAM/UH+Web+Login+Service+-+CAS+v3).
+First you must sign in using your UHM account. Once you are logged in you will see a large image with 6 tiles below as the following 
+1) Students
+2) Buy Books
+3) TextBooks
+4) Sell Books
+5) Matches
+6) Help
 
-This application builds upon meteor-application-template to implement CAS authentication as follows:
 
-First, it uses [atoy40:meteor-accounts-cas](https://github.com/atoy40/meteor-accounts-cas). (I also had to manually add the "random" package from the meteor core.)
+## Buy Books
+To buy books click on the buy books button or hover your mouse over the navigation bar "Buy" sections
+There you will be prompted to 
 
-Second, it defines a template called CasLogin in [CasLogin.html](https://github.com/ics-software-engineering/meteor-example-uh-cas/blob/master/app/client/templates/application/CasLogin.html) and [CasLogin.js](https://github.com/ics-software-engineering/meteor-example-uh-cas/blob/master/app/client/templates/application/CasLogin.js).  The CasLogin template is invoked in the [Header.html](https://github.com/ics-software-engineering/meteor-example-uh-cas/blob/master/app/client/templates/application/Header.html) to put the link in the navbar to login (and after successful login, to display the user name and a logout button).
 
-Third, the [settings.development.json](https://github.com/ics-software-engineering/meteor-example-uh-cas/blob/master/config/settings.development.json) file provides the configuration parameters to the meteor-accounts-cas package. Note that only two users are allowed to sign in; you will want to edit this setting before adapting this code to your own application. 
+## Text Books
+If you click TextBooks tile you will be prompted to a list of books used for all ICS courses. 
 
-Checking to see that only the users specified in the settings.development.json file are allowed is implemented in [Accounts.js](https://github.com/ics-software-engineering/meteor-example-uh-cas/blob/master/app/server/seeds/Accounts.js). This file defines a function for validating new users that checks the user-supplied account name against the list of authorized account names in the settings file.
 
-## Screencast
+## Sell Books
+To sell books click on the Sell Books button or hover your mouse over the navigation bar "Sell" sections 
 
-Click the image below to watch a 10 minute walkthrough of this system.
+## Matches
 
-[<img src="https://raw.githubusercontent.com/ics-software-engineering/meteor-example-uh-cas/master/doc/meteor-example-uh-cas-youtube.png" width="600">](https://www.youtube.com/watch?v=HA_NAdsr-yw)
+This will give you potential buyers or sellers that are either buying or selling the book you curently have or looking for 
+
+## Help
+
+Show new users how to use this web application 
+
+
 
 ## Credits
 
-Thanks to [Yongwen Xu](https://github.com/yongwen) for the sample code! 
-
+Thanks to Team LightSteelBlue for the Textbook list implementation.  
 
