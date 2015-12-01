@@ -1,7 +1,7 @@
 body {
-  padding-top: 60px;  /* Move body of page below navbar. */
+  padding-top: 50px;  /* Move body of page below navbar. */
   text-align: center;
-  background-color: white;
+  background-color: black;
 }
 
 .navbar-inverse {
@@ -18,13 +18,13 @@ body {
 }
 
 h3 {
-  color: black;
+  color: white;
 }
 
 .well {
   text-align: center;
   color: white;
-  background-color: royalblue;
+  background-color: transparent;
   border: none;
 }
 
