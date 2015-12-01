@@ -71,14 +71,12 @@ Meteor.methods({
   /**
    * email the owner of an offer if that user's notification is set to send email
    */
-  contactOfferOwner: function(currentOfferId){
-    var offer=SellOffer.find(currentOfferId);
-    var seller=Student.find({email: currentOfferId.owner});
-    if(seller.send){
-      window.open("mailto:"+seller.email+"@hawaii.edu");
-    }
-    offer.expires=moment().format('L');
-    offer.buyer=Meteor.user().profile.name;
+  contactOfferOwner: function(docId, doc){
+    var seller=Student.findOne({email: doc.owner});
+    if(seller.send){window.open("mailto:"+seller.email+"@hawaii.edu");}
+    console.log(doc);
+    check(doc, SellOffer.simpleSchema());
+    SellOffer.update({_id: docId}, doc);
   }
 });
 

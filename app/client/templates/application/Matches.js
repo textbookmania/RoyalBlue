@@ -26,9 +26,11 @@ Template.Matches.events({
   'click .accept': function(e){
     e.preventDefault();
     if (confirm("Accept this offer??")) {
-      var currentOfferId = this._id;
-      this.expires=(moment());
-      Meteor.call("contactOfferOwner", currentOfferId);
+      var docId = this._id;
+      this.expires=moment().format('L');
+      this.buyer=Meteor.user().profile.name;
+      var doc = this;
+      Meteor.call("contactOfferOwner", docId, doc);
       //Router.go('Matches');
     }
   }
