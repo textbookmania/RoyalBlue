@@ -28,6 +28,10 @@ h3 {
   border: none;
 }
 
+p {
+  color: white;
+}
+
 .studentLogo {
   background-image: url("/images/student.jpg");
   background-size: 30%;
