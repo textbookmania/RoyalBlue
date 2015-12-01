@@ -7,13 +7,10 @@
         <thead>
         <tr>
           <th>picture</th>
-          <th>Description</th>
           <th>ISBN</th>
           <th>Condition</th>
           <th>Offer</th>
           <th>Expires</th>
-          <th>Edit</th>
-          <th>Delete</th>
         </tr>
         </thead>
 
@@ -25,11 +22,10 @@
             {{else}}
             <td><i class="fa fa-book textbookImage"></i></td>
             {{/if}}
-            <td>{{description}}</td>
             <td>{{isbn}}</td>
             <td>{{condition}}</td>
             <td>{{offer}}</td>
-            <td>{{expire}}</td>
+            <td>{{expires}}</td>
 
             <td><a href="{{pathFor 'EditBuyOffer'}}">Edit</a></td>
             <td><a class="delete" href="#">Delete</a></td>
