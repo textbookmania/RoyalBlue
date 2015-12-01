@@ -3,9 +3,15 @@
   {{#if currentUser}}
     <center><h4>The current user is: {{ currentUser.profile.name }}</h4></center>
 
+  <div class="heroImage">
+    <img src="/images/ex2.jpg">
+  </div>
+
   <div class="container">
+    <div class="heroImage">
     <div class="row">
-      <div class="col-lg-4">
+
+      <div class="col-lg-2">
         <div class="well">
           <a href="{{ pathFor 'Students' }}"><i class="fa fa-users fa-5x"></i><br><h3>Students</h3></a>
 
@@ -13,15 +19,15 @@
         </div>
       </div>
 
-      <div class="col-lg-4">
+      <div class="col-lg-2">
         <div class="well">
 
-         <a href="{{ pathFor 'AddBuyOffer' }}"><i class="fa fa-cart-plus fa-5x"></i><br><h3>Add/Buy Orders</h3></a>
+          <a href="{{ pathFor 'AddBuyOffer' }}"><i class="fa fa-cart-plus fa-5x"></i><br><h3>Add/Buy Orders</h3></a>
 
         </div>
       </div>
 
-      <div class="col-lg-4">
+      <div class="col-lg-2">
         <div class="well">
 
           <a href="{{ pathFor 'Matches' }}"><i class="fa fa-check-circle-o fa-5x"></i><br><h3>Matches</h3></a>
@@ -30,15 +36,7 @@
       </div>
 
 
-
-    </div>
-  </div> <!-- End of firstrow -->
-
-  <div class="container">
-    <div class="row">
-
-
-      <div class="col-lg-4">
+      <div class="col-lg-2">
         <div class="well">
 
           <a href="{{ pathFor 'Textbooks' }}"><i class="fa fa-book fa-5x"></i><br><h3>TextBooks</h3></a>
@@ -46,7 +44,7 @@
         </div>
       </div>
 
-      <div class="col-lg-4">
+      <div class="col-lg-2">
         <div class="well">
 
           <a href="{{ pathFor 'AddSellOffer' }}"><i class="fa fa-usd fa-5x"></i><br><h3>Add/Sell Orders</h3></a>
@@ -54,7 +52,7 @@
         </div>
       </div>
 
-      <div class="col-lg-4">
+      <div class="col-lg-2">
         <div class="well">
 
           <a href="{{ pathFor 'Help' }}"><i class="fa fa-question fa-5x"></i><br><h3>Help</h3></a>
@@ -63,65 +61,8 @@
       </div>
 
     </div>
-  </div>
-
-
-  <!-- OLD BUTTON LAYOUT
-  <div class="container">
-    <div class="row" >
-      <div class="col-lg-6">
-        <div class="well studentLogo">
-          <h1><a href="{{ pathFor 'Students' }}">Students</a></h1>
-          <div class="studentLogo"></div>
-          <h4>Connect with other students<br> Make friends!</h4>
-
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="well buy">
-          <h1><a href="{{ pathFor 'AddBuyOffer' }}">Add/Buy Orders</a></h1>
-          <div class="buy"></div>
-          <h4>Looking for a book? <br>List it here. We'll help find a seller.</h4>
-
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="well">
-          <h1><a href="{{ pathFor 'Matches' }}">Matches</a></h1>
-          <h4>We'll search our database for potential buyers and sellers.</h4>
-
-        </div>
-      </div>
     </div>
   </div>
-
-  <br>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="well">
-          <h1><a href="{{ pathFor 'Textbooks' }}">TextBooks</a></h1>
-          <h4>View our current books! Add a book if you don't see what you need!</h4>
-
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="well">
-          <h1><a href="{{ pathFor 'AddSellOffer' }}">Add/Sell Orders</a></h1>
-          <h4>Got used textbooks to sell? List it here.</h4>
-
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="well">
-          <h1><a href="{{ pathFor 'Help' }}">Help</a></h1>
-          <h4>We'll do our best to answer your questions.</h4>
-
-        </div>
-      </div>
-    </div>
-  </div>
-  -->
 
 
   {{else}}
@@ -129,6 +70,7 @@
   <h3>You are currently not logged in.
   Need <a href="{{ pathFor 'Help' }}">help</a>?</h3>
 
+  <div class="homepageImage"></div>
   {{/if}}
 
 </template>

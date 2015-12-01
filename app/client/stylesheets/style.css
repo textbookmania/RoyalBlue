@@ -1,16 +1,20 @@
 body {
   padding-top: 60px;  /* Move body of page below navbar. */
   text-align: center;
-  color: black;
+  background-color: white;
 }
 
 .navbar-inverse {
-  background-color: royalblue;
+  background-color: black;
   border: none;
 }
 
-a {
-  color: royalblue;
+.well a{
+  color: white;
+}
+
+.well h3{
+  color: white;
 }
 
 h3 {
@@ -19,8 +23,8 @@ h3 {
 
 .well {
   text-align: center;
-  color: royalblue;
-  background: none;
+  color: white;
+  background-color: royalblue;
   border: none;
 }
 
@@ -39,15 +43,24 @@ h3 {
   background-repeat: no-repeat;
 }
 
-.homepageImage {
-  background-image: url("/images/homeimage2.jpg");
-  height: 400px;
-  background-size: contain;
-  background-repeat: no-repeat;
+.heroImage {
+  background-size: cover;
   background-position: center;
+  width:100%;
+  height: auto;
 
 }
 
+.homepageImage {
+  background-image: url("/images/bookwall.jpg");
+  background-size: 400px;
+
+}
+
+.vertical {
+  height: 500px;
+
+}
 
 
 .userImage, .textbookImage{
