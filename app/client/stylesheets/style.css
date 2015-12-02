@@ -5,29 +5,31 @@ body {
   color: white;
 }
 
+
 .navbar-inverse {
-  background-color: royalblue;
+  background-color: black;
   border: none;
+  height: 10px;
 }
 
 .navbar-inverse .navbar-brand {
-  font-family: "Ubuntu";
   font-size: 35px;
   color: white;
 }
 
 .navbar-inverse .navbar-nav>li>a {
-  font-size: 15px;
+  font-size: 18px;
   color: white;
+  padding-top: 10px;
 }
 
 
 .well a{
-  color: white;
+  color: royalblue;
 }
 
 .well h3{
-  color: royalblue;
+  color: white;
 }
 
 h3 {
@@ -50,6 +52,11 @@ p {
   text-align: left;
 }
 
+.helpMessage {
+  font-family: Arial;
+  text-align: left;
+}
+
 .helpPage h2 {
   color: royalblue;
 }
@@ -58,24 +65,7 @@ p {
   color: #ec971f;
 }
 
-.studentLogo {
-  background-image: url("/images/student.jpg");
-  background-size: 30%;
-  background-position: left;
-  background-repeat: no-repeat;
-
-}
-
-.buy {
-  background-image: url("/images/addtocart.jpeg");
-  background-size: 30%;
-  background-position: left;
-  background-repeat: no-repeat;
-}
-
 .heroImage {
-  padding-top: 20px;
-  width: 100%;
   background-size: cover;
   background-position: center;
 
@@ -91,7 +81,6 @@ p {
   height: 500px;
 
 }
-
 
 .userImage, .textbookImage{
   font-size: 100px;

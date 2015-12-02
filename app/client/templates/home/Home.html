@@ -2,13 +2,12 @@
 
   {{#if currentUser}}
 
+  <!-- manually implemented cover image -->
   <div class="heroImage">
-
-
-    <img src="/images/ex3.jpg" width="1100px" height="300px">
+    <img src="/images/logo.jpg">
   </div><br>
 
-
+  <!-- Start of row of button icons -->
   <div class="container">
     <div class="row">
 
@@ -63,14 +62,21 @@
 
     </div>
   </div>
-
+  <!--End of row of button icons -->
 
   {{else}}
   <br><br><br>
   <h3>You are currently not logged in.
   Need <a href="{{ pathFor 'Help' }}">help</a>?</h3>
 
-  <div class="homepageImage"></div>
+  <div class="helpMessage">
+    <p>
+      <h4>
+        Welcome to the Textbook Mania (TBM)! <br>
+        The RoyalBlue Team has developed a site that will accommodate your needs of finding your textbooks!
+    </h4>
+    </p>
+  </div>
   {{/if}}
 
 </template>
