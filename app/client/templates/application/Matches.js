@@ -1,7 +1,7 @@
 Template.Matches.helpers({
 
   /**
-   * @returns {*} All of the documents matching current users sell/buy offers.
+   * @returns {*} All non-expired matches for current users sell offers.
    */
   findSellMatches: function () {
     var mySellOffer = SellOffer.find({ owner: Meteor.user().profile.name }).fetch();
@@ -10,13 +10,24 @@ Template.Matches.helpers({
       sellOfferMatches = sellOfferMatches.concat(BuyOffer.find({isbn: rec.isbn}).fetch());
     });
     return sellOfferMatches;
-
   },
+
+  /**
+   * @returns {*} All non-expired matches for current users buy offers.
+   */
   findBuyMatches: function () {
-    var myBuyOffer = BuyOffer.find({owner: Meteor.user().profile.name}).fetch();
     var buyOfferMatches=[];
+    var sellOfferCursor =[];
+    var myBuyOffer = BuyOffer.find({owner: Meteor.user().profile.name}).fetch();
     _.each(myBuyOffer, function(record){
-      buyOfferMatches = buyOfferMatches.concat(SellOffer.find({isbn: record.isbn}).fetch());
+      sellOfferCursor = sellOfferCursor.concat(SellOffer.find({isbn: record.isbn}));
+    });
+    _.each(sellOfferCursor, function(curse) {
+      curse.forEach(function (offer) {
+        if (moment(offer.expires).isAfter()) {
+          buyOfferMatches = buyOfferMatches.concat(offer);
+        }
+      });
     });
     return buyOfferMatches;
   }

@@ -12,7 +12,7 @@ Meteor.methods({
     doc.image = _.find(textList, function(record){
       return record.isbn === doc.isbn;
     }).image;
-    doc.expires=moment().add(7, 'days').format('L');
+    doc.expires=moment().add(7, 'days').format();
     doc.owner = Meteor.user().profile.name;
     check(doc, BuyOffer.simpleSchema());
     BuyOffer.insert(doc);
