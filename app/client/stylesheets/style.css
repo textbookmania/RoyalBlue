@@ -34,6 +34,7 @@ body {
 
 h3 {
   color: white;
+  padding-bottom: 10px;
 }
 
 .well {
@@ -65,9 +66,17 @@ p {
   color: #ec971f;
 }
 
-.heroImage {
-  background-size: cover;
+.heroIm {
   background-position: center;
+  text-align: center;
+}
+
+.heroImage {
+  height: 300px;
+  width: 1000px;
+  background-position: center;
+  padding-top: 10px;
+  padding-left: 20px;
 
 }
 
