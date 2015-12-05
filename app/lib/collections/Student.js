@@ -65,13 +65,43 @@ Meteor.methods({
   },
   /**
    * email the owner of an offer if that user's notification is set to send email
+   * and set expiration date to accepted time
    */
-  contactOfferOwner: function(docId, doc){
-    var seller=Student.findOne({email: doc.owner});
-    //if(seller.send){window.open("mailto:"+seller.email+"@hawaii.edu");}
-    console.log(seller);
-    //check(doc, SellOffer.simpleSchema());
-    //SellOffer.update({_id: docId}, doc);
+  contactOfferOwner: function (docId, doc) {
+    var seller = Student.findOne({email: doc.owner});
+    var sellOfferId = SellOffer.findOne({isbn: doc.isbn, owner: doc.seller})._id;
+    if (seller.send) {
+      Meteor.call("sendEmail",
+          doc.owner + "@hawaii.edu",
+          doc.seller + "@hawaii.edu",
+          "A seller has accepted your offer",
+          "Your offer to buy " + doc.isbn + " has been accepted by " + doc.owner);
+    }
+    BuyOffer.update({_id: docId}, {$set:{expires: doc.expires, seller: doc.seller}});
+    SellOffer.update({_id:sellOfferId},{$set:{expires: doc.expires}});
+  },
+  /**
+   * function to send email to an owner
+   * @param to uh email of receiver
+   * @param from uh email of sender
+   * @param subject subject of the email
+   * @param text body of the email
+   */
+  sendEmail: function (to, from, subject, text) {
+    if (Meteor.isServer) {
+      check([to, from, subject, text], [String]);
+
+      // Let other method calls from the same client start running,
+      // without waiting for the email sending to complete.
+      this.unblock();
+
+      Email.send({
+        to: to,
+        from: from,
+        subject: subject,
+        text: text
+      });
+    }
   }
 });
 
