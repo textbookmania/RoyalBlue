@@ -111,6 +111,16 @@ BuyOffer.attachSchema(new SimpleSchema({
       group: buyOffer,
       placeholder: ""
     }
+  },
+  seller: {
+    label: "0",
+    type: String,
+    optional: true,
+    autoform: {
+      type: "hidden",
+      group: buyOffer,
+      placeholder: ""
+    }
   }
 
 }));

@@ -46,8 +46,8 @@ Template.Matches.events({
     e.preventDefault();
     if (confirm("Accept this offer??")) {
       var docId = this._id;
-      this.expires=moment().format('L');
-      this.buyer=Meteor.user().profile.name;
+      this.expires=moment().format();
+      this.seller=Meteor.user().profile.name;
       var doc = this;
       Meteor.call("contactOfferOwner", docId, doc);
       //Router.go('Matches');
