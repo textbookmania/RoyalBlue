@@ -12,6 +12,7 @@ Meteor.methods({
     doc.image = _.find(textList, function(record){
       return record.isbn === doc.isbn;
     }).image;
+    doc.expires=moment().add(7, 'days').format();
     doc.owner = Meteor.user().profile.name;
     check(doc, SellOffer.simpleSchema());
     SellOffer.insert(doc);
@@ -89,18 +90,8 @@ SellOffer.attachSchema(new SimpleSchema({
       placeholder: "image.org"
     }
   },
-  expired: {
-    label: "L",
-    type: Boolean,
-    optional: true,
-    autoform: {
-      type: "hidden",
-      group: sellOffer,
-      placeholder: ""
-    }
-  },
-  created: {
-    type: Date,
+  expires: {
+    type: String,
     optional: true,
     autoform: {
       type: "hidden",
@@ -109,6 +100,16 @@ SellOffer.attachSchema(new SimpleSchema({
     }
   },
   owner: {
+    label: "0",
+    type: String,
+    optional: true,
+    autoform: {
+      type: "hidden",
+      group: sellOffer,
+      placeholder: ""
+    }
+  },
+  buyer: {
     label: "0",
     type: String,
     optional: true,

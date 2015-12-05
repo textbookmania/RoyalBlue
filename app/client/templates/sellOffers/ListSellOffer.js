@@ -16,5 +16,13 @@ Template.ListSellOffer.events({
       Meteor.call("deleteSellOffer", currentSellOfferId);
       Router.go('ListSellOffer');
     }
+  },
+  'click .contact': function(e){
+    e.preventDefault();
+    if (confirm("Delete this sell offer??")) {
+      var currentSellOfferId = this._id;
+      Meteor.call("contactBuyer", currentSellOfferId);
+    }
   }
+
 });

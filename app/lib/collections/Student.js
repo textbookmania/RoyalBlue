@@ -18,12 +18,10 @@ Meteor.methods({
    * @param doc The Student document.
    */
   addStudent: function (doc) {
-
     //remove @hawaii.edu
     if (doc.email.indexOf('@') > -1) {
       doc.email = doc.email.slice(0, doc.email.indexOf('@'));
     }
-
     //stop duplicate emails
     if (_.findWhere(Student.find().fetch(), {email: doc.email})) {
       if (Meteor.isClient) {
@@ -37,13 +35,11 @@ Meteor.methods({
         Meteor.settings.allowed_users.push(doc.email);
       }
     }
-
     check(doc, Student.simpleSchema());
     Student.insert(doc);
   },
 
   /**
-   *
    * Invoked by AutoForm to update a Student record.
    * @param doc The Textbooks document.
    * @param docID It's ID.
@@ -52,7 +48,6 @@ Meteor.methods({
     check(doc, Student.simpleSchema());
     Student.update({_id: docID}, doc);
   },
-
   /**
    *Remove student record and add to ban list
    * @param docID ID of record to be removed.
@@ -67,6 +62,16 @@ Meteor.methods({
       }
       Student.remove(docID);
     }
+  },
+  /**
+   * email the owner of an offer if that user's notification is set to send email
+   */
+  contactOfferOwner: function(docId, doc){
+    var seller=Student.findOne({email: doc.owner});
+    //if(seller.send){window.open("mailto:"+seller.email+"@hawaii.edu");}
+    console.log(seller);
+    //check(doc, SellOffer.simpleSchema());
+    //SellOffer.update({_id: docId}, doc);
   }
 });
 

@@ -3,8 +3,9 @@
  * @type {*[]}
  */
 var sellOfferSeeds = [
-  {isbn: "1", condition: "good",offer: 1, owner: "1"},
-  {isbn: "1", condition: "poor",offer: 2, owner: "2"}
+  {isbn: "9780470509470", condition: "good",offer: 1, owner: "3", expires: moment().subtract(1,'days').format(), image: "http://images.amazon.com/images/P/0470509473.01.LZ.jpg"},
+  {isbn: "9780470509470", condition: "poor",offer: 2, owner: "4", expires: moment().format(), image: "http://images.amazon.com/images/P/0470509473.01.LZ.jpg"},
+  {isbn: "9780470509470", condition: "poor",offer: 5, owner: "5", expires: moment().add(1,'years').format(), image: "http://images.amazon.com/images/P/0470509473.01.LZ.jpg"}
 ];
 
 /**
