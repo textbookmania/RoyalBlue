@@ -9,15 +9,15 @@ Before you installed this application you will need to have a web framework Mete
 If you have meteor then below is how to install our application. 
 
 ### method 1 (if you don't have GitHub installed) 
-1. Download the web application zip or tar package. 
+1. Download the web application zip or tar package from our [GitHub Page](http://textbookmania.github.io/RoyalBlue). 
 2. extract the file in any directory of your choice.
 
-### method 2 (if you have GitHub installed, want to download zip folder) 
-1. Download the web application zip folder.
+### method 2 (if you have GitHub installed, want to download package) 
+1. Download the web application zip or tar package from our [GitHub Page](http://textbookmania.github.io/RoyalBlue).
 2. Extract it to your local repository directory.
 
 ### method 3 (if you have GitHub installed, want to clone it)
-1. Go to our [GitHub repository page](https://github.com/textbookmania/RoyalBlue)
+1. Go to our [GitHub repository](https://github.com/textbookmania/RoyalBlue)
 2. Clone to desktop and the GitHub will put it into your local repository
 
 
