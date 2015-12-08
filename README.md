@@ -55,8 +55,7 @@ We want to credit the team that helped us
 We want to credit the applications that helped us achieve this web application
 
 1. [Meteor](https://www.meteor.com/)
-2. Google Fonts
-
-
-2.  
+2. fontawesome : fontawesome
+3. email
+4. momentjs : moment
 
