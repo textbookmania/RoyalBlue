@@ -17,7 +17,7 @@
         <ul class="nav navbar-nav navbar-right">
           {{#if currentUser}}
           <li>
-            <a data-toggle="dropdown" class="dropdown-toggle">Textbooks<b class="caret"></b></a>
+            <a data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-book fa-2x"></i><b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a href="{{ pathFor 'Textbooks' }}">List Textbooks</a></li>
 
@@ -29,7 +29,7 @@
           </li>
 
           <li>
-            <a data-toggle="dropdown" class="dropdown-toggle">Buy<b class="caret"></b></a>
+            <a data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-cart-plus fa-2x"></i><b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a href="{{ pathFor 'ListBuyOffer' }}">List BuyOffers</a></li>
               <li><a href="{{ pathFor 'AddBuyOffer' }}">Add Buy Offer</a></li>
