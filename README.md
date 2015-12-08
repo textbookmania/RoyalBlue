@@ -18,7 +18,6 @@ meteor --settings ../config/settings.development.json
 The settings file is needed to provide CAS parameter information. Note that you won't be able to successfully login until you edit the [settings.development.json](https://github.com/ics-software-engineering/meteor-example-uh-cas/blob/master/config/settings.development.json) file to indicate that your UH account should be one of those allowed to login.
 
 ## What is Text Book Mania
-
 First you must sign in using your UHM account. Once you are logged in you will see a large image with six ordered buttons as followed 
 1) Students
 2) Buy Books
@@ -26,7 +25,6 @@ First you must sign in using your UHM account. Once you are logged in you will s
 4) Sell Books
 5) Matches
 6) Help
-
 
 ## Students
 This display the students of University of Hawaii at Manoa Computer Science 
@@ -36,11 +34,11 @@ The Buy Books page will list
 
 
 ## Text Books
-Text Books page will bring you to a list of all textbooks use in the Computer Sciece (ICS) mahjor. Each book will be listed with its ISBN and course that is used. This page can be edted by the Admin users to add, delete, or edit the list. Regular users are only going to view them. 
+Text Books page will bring you to a list of all textbooks use in the Computer Sciece (ICS) mahjor. Each book will be listed with its ISBN and description about the books such as what ICS course will use the desired textbook.  
 
 
 ## Sell Books
-To sell books click on the Sell Books button or hover your mouse over the navigation bar "Sell" sections 
+To sell books click on the Sell Books button or hover your mouse over the navigation bar "Sell" sections. You will be prompted with a box with text box fields to fill in. These fields are Textbook title, ISBN, condition of the book, price of the book, and amount of the text book you are selling.  
 
 ## Matches
 This will give you potential buyers or sellers that are either buying or selling the book you currently have or looking for 
@@ -48,8 +46,6 @@ This will give you potential buyers or sellers that are either buying or selling
 ## Help
 
 Show new users how to use this web application 
-
-
 
 ## Credits
 
