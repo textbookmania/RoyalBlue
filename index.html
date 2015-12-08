@@ -4,88 +4,130 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>textbookmania_Royalblue by textbookmania</title>
-
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="javascripts/scale.fix.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
   </head>
   <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/textbookmania/RoyalBlue">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/textbookmania/RoyalBlue/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/textbookmania/RoyalBlue/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
     <div class="wrapper">
-      <header>
-        <h1>textbookmania_Royalblue</h1>
-        <p>Textbook Exchange application</p>
-        <p class="view"><a href="https://github.com/textbookmania/RoyalBlue">View the Project on GitHub <small>textbookmania/RoyalBlue</small></a></p>
-        <ul>
-          <li><a href="https://github.com/textbookmania/RoyalBlue/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/textbookmania/RoyalBlue/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/textbookmania/RoyalBlue">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
+
       <section>
-        <p><img src="https://raw.githubusercontent.com/textbookmania/RoyalBlue/master/app/public/images/logged_in.JPG" alt=""></p>
+        <div id="title">
+          <h1>textbookmania_Royalblue</h1>
+          <p>Textbook Exchange application</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/textbookmania">textbookmania</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
 
-<h2>
-<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+        <h1>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h1>
 
-<p>Download the system, cd in the app directory, then execute:</p>
+<p>Text Book Mania is a way computer science (ICS) students, attending at the University of Hawaii at Manoa (UHM), can exchange their textbooks more easily and more actively. This project is developed as a direct way for ICS students to exhcange their textbook without using other web applcation such as craigslist. Services like craigslist are public service so finding a textbook another student is selling will be tedious and by the time you found that textbook, the ad was up for more than three days which could lead to another buyer to getting the book before you. With Text Book Mania you can put in a buy order of desired textbook for your ICS course and you will be given a list of other ICS student selling the textbook you desired. The process for selling a book is the same as well. Text Book Mania is a innovative way for students to get their books fast where buyers and sellers are straightforward and honest. The best thing about this application is that this service is free to all users that have an account with UHM. </p>
+
+<p>You can visit our <a href="">Wiki page</a> for a better understanding of our system. </p>
+
+<h1>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h1>
+
+<p>Before you installed this application you will need to have a web framework Meteor installed. If you don't know what meteor is please refer to our wiki page before you proceed for it will save you an exorbatent amount of time. </p>
+
+<p>If you have meteor then below is how to install our application. </p>
+
+<h3>
+<a id="method-1-if-you-dont-have-github-installed" class="anchor" href="#method-1-if-you-dont-have-github-installed" aria-hidden="true"><span class="octicon octicon-link"></span></a>method 1 (if you don't have GitHub installed)</h3>
+
+<ol>
+<li>Download the web application zip or tar package from our <a href="http://textbookmania.github.io/RoyalBlue">GitHub Page</a>. </li>
+<li>extract the file in any directory of your choice.</li>
+</ol>
+
+<h3>
+<a id="method-2-if-you-have-github-installed-want-to-download-package" class="anchor" href="#method-2-if-you-have-github-installed-want-to-download-package" aria-hidden="true"><span class="octicon octicon-link"></span></a>method 2 (if you have GitHub installed, want to download package)</h3>
+
+<ol>
+<li>Download the web application zip or tar package from our <a href="http://textbookmania.github.io/RoyalBlue">GitHub Page</a>.</li>
+<li>Extract it to your local repository directory.</li>
+</ol>
+
+<h3>
+<a id="method-3-if-you-have-github-installed-want-to-clone-it" class="anchor" href="#method-3-if-you-have-github-installed-want-to-clone-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>method 3 (if you have GitHub installed, want to clone it)</h3>
+
+<ol>
+<li>Go to our <a href="https://github.com/textbookmania/RoyalBlue">GitHub repository</a>
+</li>
+<li>Clone to desktop and the GitHub will put it into your local repository</li>
+</ol>
+
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h1>
+
+<ol>
+<li>bring up Git shell (Mac, Linux, or Windows). If you are using the terminal (Mac, Linux) or Windows Powershell then cd into your Github directory.<br>
+</li>
+<li>cd into the app directory, then execute: </li>
+</ol>
 
 <pre><code>meteor --settings ../config/settings.development.json
 </code></pre>
 
 <p>The settings file is needed to provide CAS parameter information. Note that you won't be able to successfully login until you edit the <a href="https://github.com/ics-software-engineering/meteor-example-uh-cas/blob/master/config/settings.development.json">settings.development.json</a> file to indicate that your UH account should be one of those allowed to login.</p>
 
-<h2>
-<a id="walkthrough" class="anchor" href="#walkthrough" aria-hidden="true"><span class="octicon octicon-link"></span></a>Walkthrough</h2>
+<h1>
+<a id="credits" class="anchor" href="#credits" aria-hidden="true"><span class="octicon octicon-link"></span></a>Credits</h1>
 
-<p>First you must sign in using your UHM account. Once you are logged in you will see a large image with 6 tiles below as the following 
-1) Students
-2) Buy Books
-3) TextBooks
-4) Sell Books
-5) Matches
-6) Help</p>
+<p>Developing a software implementation is one heck of a ride. There are ups and downs in our journey and we want to commemorate those who helped us along the way to get us Text Book Mania deployed and ready to service UHM ICS students. </p>
 
-<h2>
-<a id="buy-books" class="anchor" href="#buy-books" aria-hidden="true"><span class="octicon octicon-link"></span></a>Buy Books</h2>
+<h3>
+<a id="teams" class="anchor" href="#teams" aria-hidden="true"><span class="octicon octicon-link"></span></a>Teams</h3>
 
-<p>To buy books click on the buy books button or hover your mouse over the navigation bar "Buy" sections
-There you will be prompted to </p>
+<p>We want to credit the team that helped us</p>
 
-<h2>
-<a id="text-books" class="anchor" href="#text-books" aria-hidden="true"><span class="octicon octicon-link"></span></a>Text Books</h2>
+<ol>
+<li>
+<p>Team Light Steel Blue </p>
 
-<p>If you click TextBooks tile you will be prompted to a list of books used for all ICS courses. </p>
+<ul>
+<li>Implementation </li>
+</ul>
+</li>
+<li>
+<p>Team Tomato </p>
 
-<h2>
-<a id="sell-books" class="anchor" href="#sell-books" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sell Books</h2>
+<ul>
+<li>Student page </li>
+</ul>
+</li>
+<li>
+<p>SkyBlue </p>
 
-<p>To sell books click on the Sell Books button or hover your mouse over the navigation bar "Sell" sections </p>
-
-<h2>
-<a id="matches" class="anchor" href="#matches" aria-hidden="true"><span class="octicon octicon-link"></span></a>Matches</h2>
-
-<p>This will give you potential buyers or sellers that are either buying or selling the book you curently have or looking for </p>
-
-<h2>
-<a id="help" class="anchor" href="#help" aria-hidden="true"><span class="octicon octicon-link"></span></a>Help</h2>
-
-<p>Show new users how to use this web application </p>
-
-<h2>
-<a id="credits" class="anchor" href="#credits" aria-hidden="true"><span class="octicon octicon-link"></span></a>Credits</h2>
-
-<p>Thanks to Team LightSteelBlue for the Textbook list implementation.  </p>
+<ul>
+<li>UI design </li>
+<li>Discord</li>
+</ul>
+</li>
+</ol>
       </section>
+
     </div>
-    <footer>
-      <p>Project maintained by <a href="https://github.com/textbookmania">textbookmania</a></p>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
   </body>
