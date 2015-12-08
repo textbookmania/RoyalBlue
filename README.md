@@ -1,8 +1,5 @@
-## What is Textbook mania
-
-Text Book Mania is a web application that is built upon the meteor web framework. If you are not familiar with Meteor please visit their [wiki page](http://docs.meteor.com/#/full/quickstart). If you don't fancy the wiki page, [meteor's](https://www.meteor.com/) website would make a good start to learn about meteor without the overflowing amount of information. 
-
-Text Book Mania also utilizes the University of Hawaii at Manoa CAS system so an account (MYUH, Laulima, gmail) with University of Hawaii at Manoa is needed to use this application. If you have an account with University of Hawaii at Manoa please proceed to instalation of the application.
+## Overview 
+Text Book Mania is a way computer science (ICS) students, attending at the University of Hawaii at Manoa, can  
 
 ## Usage
 
