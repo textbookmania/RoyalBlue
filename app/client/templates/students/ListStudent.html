@@ -1,7 +1,7 @@
 <template name="ListStudent">
   <h1>List all Students</h1>
   {{#IfLoggedIn}}
-  {{#if isInRole 'admin'}}
+
     <div class="well">
 
       <table class="table">
@@ -10,9 +10,11 @@
           <th>Picture</th>
           <th>First</th>
           <th>Last</th>
-          <td>Email</td>
+          <th>Email</th>
+          {{#if isInRole}}
           <th>Edit</th>
           <th>Delete</th>
+          {{/if}}
 
         </tr>
         </thead>
@@ -20,18 +22,24 @@
         <tbody>
         {{#each studentList}}
           <tr>
-            <th>picture</th>
+            {{#if image}}
+            <td><img class="userImage img-rounded" src="{{image}}"></td>
+            {{else}}
+            <td><i class="fa fa-user userImage"></i></td>
+            {{/if}}
             <td>{{firstName}}</td>
             <td>{{lastName}}</td>
-            <td>{{email}}</td>
+            <td>{{email}}@hawaii.edu</td>
+            {{#if isInRole 'admin'}}
             <td><a href="{{pathFor 'EditStudent'}}">Edit</a></td>
             <td><a class="delete" href="#">Delete</a></td>
+            {{/if}}
           </tr>
         {{/each}}
         </tbody>
       </table>
 
     </div>
-  {{/if}}
+
   {{/IfLoggedIn}}
 </template>

@@ -11,7 +11,7 @@
           <th>Condition</th>
           <th>Offer</th>
           <th>Expires</th>
-          <th>Buyer</th>
+
 
         </tr>
         </thead>
@@ -28,13 +28,9 @@
             <td>{{condition}}</td>
             <td>{{offer}}</td>
             <td>{{expires}}</td>
-            {{#if buyer}}
-            <td><a class="contact" href="#">{{buyer}}</a></td>
-            {{else}}
-            <td>None</td>
             <td><a href="{{pathFor 'EditSellOffer'}}">Edit</a></td>
             <td><a class="delete" href="#">Delete</a></td>
-            {{/if}}
+
           </tr>
         {{/each}}
         </tbody>
