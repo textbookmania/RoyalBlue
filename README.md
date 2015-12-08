@@ -1,4 +1,4 @@
-## Where to Start 
+## What is Textbook mania
 
 Text Book Mania is a web application that is built upon the meteor web framework. If you are not familiar with Meteor please visit their [wiki page](http://docs.meteor.com/#/full/quickstart). If you don't fancy the wiki page, [meteor's](https://www.meteor.com/) website would make a good start to learn about meteor without the overflowing amount of information. 
 
