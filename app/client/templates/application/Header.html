@@ -11,7 +11,7 @@
         </button>
         <a class="navbar-brand" href="{{pathFor 'Home'}}">Textbook Mania!</a>
       </div>
-        <!-- Display collapse subitems related to menu -->
+      <!-- Display collapse subitems related to menu -->
       <ul class="collapse navbar-collapse" id="main-nav">
 
         <ul class="nav navbar-nav navbar-right">
@@ -37,16 +37,16 @@
           </li>
 
           <li>
-            <a data-toggle="dropdown" class="dropdown-toggle">Sell<b class="caret"></b></a>
+            <a data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-usd fa-2x"></i><b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a href="{{ pathFor 'ListSellOffer' }}">List Sell Offers</a></li>
               <li><a href="{{ pathFor 'AddSellOffer' }}">Add Sell Offer</a></li>
             </ul>
           </li>
-          <li><a href="{{ pathFor 'Matches' }}">Matches</a></li>
+          <li><a href="{{ pathFor 'Matches' }}"><i class="fa fa-check-circle-o fa-2x"></i></a></li>
 
           {{/if}}
-          <li><a href="{{ pathFor 'Help' }}">Help</a></li>
+          <li><a href="{{ pathFor 'Help' }}"><i class="fa fa-question fa-2x"></i></a></li>
           {{> CasLogin }}
         </ul>
       </ul>
