@@ -48,5 +48,15 @@ We want to credit the team that helped us
    - UI design 
    - Discord
 
+4. Professor Johnson 
+   - [Meteor Template](http://ics-software-engineering.github.io/meteor-application-template/)
 
+### Applications 
+We want to credit the applications that helped us achieve this web application
+
+1. [Meteor](https://www.meteor.com/)
+2. Google Fonts
+
+
+2.  
 
