@@ -39,23 +39,26 @@ Developing a software implementation is one heck of a ride. There are ups and do
 We want to credit the team that helped us
 
 1. Team Light Steel Blue 
-   - Implementation 
+   - Implementation of the  
 
 2. Team Tomato 
-   - Student page 
+   - Student page functionality 
    
 3. SkyBlue 
    - UI design 
-   - Discord
+   - Communication
 
-4. Professor Johnson 
+4. Professor Philip Johnson 
    - [Meteor Template](http://ics-software-engineering.github.io/meteor-application-template/)
 
 ### Applications 
 We want to credit the applications that helped us achieve this web application
 
 1. [Meteor](https://www.meteor.com/)
+
 2. fontawesome : fontawesome
+
 3. email
+
 4. momentjs : moment
 
