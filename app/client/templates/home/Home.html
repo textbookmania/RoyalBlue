@@ -1,14 +1,32 @@
-<template name="Home">
+<template name="Home" xmlns="http://www.w3.org/1999/html">
 
   {{#if currentUser}}
 
+  <!-- manually implemented cover image -->
+  <!--
   <div class="heroImage">
+    <img src="/images/ex3.jpg" height="290px" width="1100px">
+  </div>
+  -->
+  <div class="heroImage">
+    <img src="/images/ex3.jpg" height="290px" width="1100px">
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="well">
+          <h2>Textbook Mania is a way students from the ICS Department can exchange their textbooks in a more efficient way. It's an alternative way to make exchanges without the use of other web applications such as Craigslist.
+          </h2>
+
+        </div>
+      </div>
+    </div>
+  </div>
 
 
-    <img src="/images/ex3.jpg" width="1100px" height="300px">
-  </div><br>
-
-
+  <!-- Start of row of button icons -->
+  <!--
   <div class="container">
     <div class="row">
 
@@ -62,15 +80,19 @@
       </div>
 
     </div>
-  </div>
-
+  </div> -->
+  <!--End of row of button icons -->
 
   {{else}}
-  <br><br><br>
   <h3>You are currently not logged in.
   Need <a href="{{ pathFor 'Help' }}">help</a>?</h3>
 
-  <div class="homepageImage"></div>
+
+  <div class="homeIm">
+    <img src="/images/heroIm.jpg" width="610" height="430">
+
+  </div>
+
   {{/if}}
 
 </template>
