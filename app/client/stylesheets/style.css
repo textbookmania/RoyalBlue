@@ -2,6 +2,7 @@ body {
   padding-top: 50px;  /* Move body of page below navbar. */
   text-align: center;
   background-color: black;
+  font-family: 'Amaranth', sans-serif;
   color: white;
 }
 
@@ -30,6 +31,12 @@ body {
 
 .well h3{
   color: white;
+}
+
+h2 {
+  color: white;
+  padding-bottom: 10px;
+  text-align: left;
 }
 
 h3 {
@@ -77,6 +84,7 @@ p {
   background-position: center;
   padding-top: 10px;
   padding-left: 20px;
+  text-align: center;
 
 }
 
