@@ -17,10 +17,11 @@ Accounts.validateNewUser(function (user) {
   if (user) {
     var username = user.services.cas.id;
     if (username && _.contains(Meteor.settings.allowed_users, username)) {
-
+      //admin role added to user in lib/collection/Student.js
+      /*
       if (_.contains(Meteor.settings.admin_users, username)) {
         Roles.addUsersToRoles(username, 'admin');
-      }
+      }*/
       if (_.contains(Meteor.settings.banned_users, username)) {
         alert("denied: contact admin");
         throw new Meteor.Error(0, "User has been banned. Contact admin");
@@ -29,5 +30,6 @@ Accounts.validateNewUser(function (user) {
     }
 
   }
+  alert("Please register a new account");
   throw new Meteor.Error(403, "User not in the allowed list");
 });

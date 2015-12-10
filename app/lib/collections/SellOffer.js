@@ -12,8 +12,15 @@ Meteor.methods({
     doc.image = _.find(textList, function(record){
       return record.isbn === doc.isbn;
     }).image;
-    doc.expires=moment().add(7, 'days').format('L');
+    doc.expires=moment().add(7, 'days').format();
     doc.owner = Meteor.user().profile.name;
+    //stop duplicate offers from same user
+    if (_.findWhere(BuyOffer.find().fetch(), {owner: doc.owner, isbn: doc.isbn}) || _.findWhere(SellOffer.find().fetch(), {owner: doc.owner, isbn: doc.isbn}) ) {
+      if (Meteor.isClient) {
+        alert("You already have a sell offer or buy offer for that book.");
+      }
+      return;
+    }
     check(doc, SellOffer.simpleSchema());
     SellOffer.insert(doc);
   },
@@ -26,6 +33,7 @@ Meteor.methods({
   editSellOffer: function (doc, docID) {
     check(doc, SellOffer.simpleSchema());
     SellOffer.update({_id: docID}, doc);
+    SellOffer.update({_id: docID}, {$set:{expires: moment().add(7, 'days').format()}});
   },
 
   deleteSellOffer: function (docID) {

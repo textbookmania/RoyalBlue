@@ -10,6 +10,7 @@
           <th>ISBN</th>
           <th>Condition</th>
           <th>Offer</th>
+          <th>Seller</th>
           <th>Expires</th>
         </tr>
         </thead>
@@ -25,6 +26,11 @@
             <td>{{isbn}}</td>
             <td>{{condition}}</td>
             <td>{{offer}}</td>
+            {{#if seller}}
+            <td>{{seller}}</td>
+            {{else}}
+            <td>none</td>
+            {{/if}}
             <td>{{expires}}</td>
 
             <td><a href="{{pathFor 'EditBuyOffer'}}">Edit</a></td>

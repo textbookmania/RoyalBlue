@@ -8,6 +8,13 @@ Meteor.methods({
    * @param doc The Textbooks document.
    */
   addTextbooks: function(doc) {
+    //stop duplicate isbns and titles
+    if (_.findWhere(Textbooks.find().fetch(), {isbn: doc.isbn})  || _.findWhere(Textbooks.find().fetch(), {title: doc.title})) {
+      if (Meteor.isClient) {
+        alert("isbn or title already exists cannot add.");
+      }
+      return;
+    }
     check(doc, Textbooks.simpleSchema());
     Textbooks.insert(doc);
   },
