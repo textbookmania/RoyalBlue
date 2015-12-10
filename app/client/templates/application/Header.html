@@ -17,6 +17,10 @@
         <ul class="nav navbar-nav navbar-right">
           {{#if currentUser}}
           <li>
+            <a href="{{ pathFor 'ListStudent' }}"><i class="fa fa-users fa-2x"></i></a>
+          </li>
+          
+          <li>
             <a data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-book fa-2x"></i><b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a href="{{ pathFor 'Textbooks' }}">List Textbooks</a></li>
