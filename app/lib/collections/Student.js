@@ -54,12 +54,14 @@ Meteor.methods({
    */
   deleteStudent: function (docID) {
     if (Roles.userIsInRole(Meteor.userId()), 'admin') {
+      /*
       if (Meteor.isServer) {
         //insert into banned_users
         if (!_.contains(Meteor.settings.banned_users, doc.email)) {
           Meteor.settings.banned_users.push(doc.email);
         }
       }
+      */
       Student.remove(docID);
     }
   },
