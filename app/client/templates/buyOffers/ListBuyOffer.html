@@ -12,6 +12,8 @@
           <th>Offer</th>
           <th>Seller</th>
           <th>Expires</th>
+          <th></th>
+          <th></th>
         </tr>
         </thead>
 
@@ -45,17 +47,6 @@
 
       {{#if isInRole 'admin'}}
       <table class="table">
-        <thead>
-        <tr>
-          <th>picture</th>
-          <th>ISBN</th>
-          <th>Condition</th>
-          <th>Offer</th>
-          <th>Seller</th>
-          <th>Expires</th>
-        </tr>
-        </thead>
-
         <tbody>
         {{#each allBuyOfferList}}
         <tr>
