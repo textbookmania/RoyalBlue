@@ -27,8 +27,8 @@
             {{else}}
             <td><i class="fa fa-user userImage"></i></td>
             {{/if}}
-            <td>{{firstName}}</td>
-            <td>{{lastName}}</td>
+            <td>{{first}}</td>
+            <td>{{last}}</td>
             <td>{{email}}@hawaii.edu</td>
             {{#if isInRole 'admin'}}
             <td><a href="{{pathFor 'EditStudent'}}">Edit</a></td>
@@ -38,7 +38,9 @@
         {{/each}}
         </tbody>
       </table>
-
+      {{#if isInRole 'admin'}}
+      {{> AddStudent}}
+      {{/if}}
     </div>
 
   {{/IfLoggedIn}}

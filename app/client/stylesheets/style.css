@@ -104,5 +104,8 @@ p {
   width: 100px;
   height: 100px;
 }
+th{
+  text-align: center;
+}
 
 

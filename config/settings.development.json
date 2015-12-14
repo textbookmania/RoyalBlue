@@ -13,14 +13,14 @@
     }
   },
   "allowed_users": [
-    "johnson",
-    "cmoore",
     "bjboado",
-    "mgy"
+    "mgy",
+    "sy"
   ],
   "admin_users": [
     "bjboado",
-    "mgy"
+    "mgy",
+    "sy"
   ],
   "banned_users": [
   ]
