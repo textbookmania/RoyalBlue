@@ -6,7 +6,13 @@ Template.Matches.helpers({
   findSellMatches: function () {
     var sellOfferMatches=[];
     var buyOfferCursor =[];
-    var mySellOffer = SellOffer.find({ owner: Meteor.user().profile.name }).fetch();
+    var mySellOffer = [];
+    var mySellOfferCurse = SellOffer.find({ owner: Meteor.user().profile.name });
+    mySellOfferCurse.forEach(function(foo){
+      if (moment(foo.expires).isAfter()) {
+        mySellOffer=mySellOffer.concat(foo);
+      }
+    });
     _.each(mySellOffer, function(rec) {
       buyOfferCursor = buyOfferCursor.concat(BuyOffer.find({isbn: rec.isbn}));
     });
@@ -26,7 +32,13 @@ Template.Matches.helpers({
   findBuyMatches: function () {
     var buyOfferMatches=[];
     var sellOfferCursor =[];
-    var myBuyOffer = BuyOffer.find({owner: Meteor.user().profile.name}).fetch();
+    var myBuyOffer = [];
+    var myBuyOfferCurse = BuyOffer.find({owner: Meteor.user().profile.name});
+    myBuyOfferCurse.forEach(function (foo){
+      if (moment(foo.expires).isAfter()) {
+        myBuyOffer=myBuyOffer.concat(foo);
+      }
+    });
     _.each(myBuyOffer, function(record){
       sellOfferCursor = sellOfferCursor.concat(SellOffer.find({isbn: record.isbn}));
     });

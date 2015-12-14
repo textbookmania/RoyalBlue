@@ -38,7 +38,9 @@
         {{/each}}
         </tbody>
       </table>
-
+      {{#if isInRole 'admin'}}
+      {{> AddStudent}}
+      {{/if}}
     </div>
 
   {{/IfLoggedIn}}

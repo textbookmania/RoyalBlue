@@ -36,7 +36,9 @@
         {{/each}}
         </tbody>
       </table>
-
+      {{#if isInRole 'admin'}}
+      {{> AddTextbooks}}
+      {{/if}}
     </div>
   {{/IfLoggedIn}}
 </template>
