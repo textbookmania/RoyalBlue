@@ -27,7 +27,7 @@
             <td>{{isbn}}</td>
             <td>{{condition}}</td>
             <td>{{offer}}</td>
-            <td>{{expires}}</td>
+            <td>{{expiresIn}}</td>
             <td><a href="{{pathFor 'EditSellOffer'}}">Edit</a></td>
             <td><a class="delete" href="#">Delete</a></td>
 
@@ -35,7 +35,33 @@
         {{/each}}
         </tbody>
       </table>
+
       {{> AddSellOffer}}
+
+      {{#if isInRole 'admin'}}
+      <table class="table">
+
+
+        <tbody>
+        {{#each allSellOfferList}}
+        <tr>
+          {{#if image}}
+          <td><img class="textbookImage" src="{{image}}"></td>
+          {{else}}
+          <td><i class="fa fa-book textbookImage"></i></td>
+          {{/if}}
+          <td>{{isbn}}</td>
+          <td>{{condition}}</td>
+          <td>{{offer}}</td>
+          <td>{{expiresIn}}</td>
+          <td><a href="{{pathFor 'EditSellOffer'}}">Edit</a></td>
+          <td><a class="delete" href="#">Delete</a></td>
+
+        </tr>
+        {{/each}}
+        </tbody>
+      </table>
+      {{/if}}
     </div>
   {{/IfLoggedIn}}
 </template>

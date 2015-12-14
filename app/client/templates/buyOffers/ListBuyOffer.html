@@ -31,7 +31,7 @@
             {{else}}
             <td>none</td>
             {{/if}}
-            <td>{{expires}}</td>
+            <td>{{expiresIn}}</td>
 
             <td><a href="{{pathFor 'EditBuyOffer'}}">Edit</a></td>
             <td><a class="delete" href="#">Delete</a></td>
@@ -40,7 +40,48 @@
         {{/each}}
         </tbody>
       </table>
+
       {{> AddBuyOffer}}
+
+      {{#if isInRole 'admin'}}
+      <table class="table">
+        <thead>
+        <tr>
+          <th>picture</th>
+          <th>ISBN</th>
+          <th>Condition</th>
+          <th>Offer</th>
+          <th>Seller</th>
+          <th>Expires</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {{#each allBuyOfferList}}
+        <tr>
+          {{#if image}}
+          <td><img class="textbookImage" src="{{image}}"></td>
+          {{else}}
+          <td><i class="fa fa-book textbookImage"></i></td>
+          {{/if}}
+          <td>{{isbn}}</td>
+          <td>{{condition}}</td>
+          <td>{{offer}}</td>
+          {{#if seller}}
+          <td>{{seller}}</td>
+          {{else}}
+          <td>none</td>
+          {{/if}}
+          <td>{{expiresIn}}</td>
+
+          <td><a href="{{pathFor 'EditBuyOffer'}}">Edit</a></td>
+          <td><a class="delete" href="#">Delete</a></td>
+
+        </tr>
+        {{/each}}
+        </tbody>
+      </table>
+      {{/if}}
     </div>
   {{/IfLoggedIn}}
 </template>
