@@ -13,7 +13,7 @@ Template.ListStudent.events({
     e.preventDefault();
     if (confirm("Delete this student??")) {
       var currentStudentId = this._id;
-      Meteor.call("deleteStudent", currentStudentId);
+      Meteor.call("deleteStudent", this, currentStudentId);
       Router.go('ListStudent');
     }
   }
