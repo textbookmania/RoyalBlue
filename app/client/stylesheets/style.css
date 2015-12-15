@@ -104,8 +104,29 @@ p {
   width: 100px;
   height: 100px;
 }
+
 th{
   text-align: center;
 }
 
 
+.table-hover {
+  color: royalblue;
+}
+
+.table-hover a {
+  color: green;
+}
+
+.well2 {
+  height:400px;
+  text-align: center;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+.well2 {
+  overflow: hidden;
+  overflow-y: scroll;
+}
