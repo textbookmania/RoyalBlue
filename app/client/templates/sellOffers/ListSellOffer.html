@@ -1,12 +1,85 @@
 <template name="ListSellOffer">
-  <h1>Your sell offers</h1>
   {{#IfLoggedIn}}
-    <div class="well">
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1>Your sell offers</h1>
+      <div class="well7">
+
+        <table class="table">
+          <thead>
+          <tr>
+            <th>Picture</th>
+            <th>Title</th>
+            <th>Condition</th>
+            <th>Offer</th>
+            <th>Expires</th>
+            <th></th>
+            <th></th>
+          </tr>
+          </thead>
+
+          <tbody>
+          {{#each sellOfferList}}
+          <tr>
+            {{#if image}}
+            <td><img class="textbookImage" src="{{image}}"></td>
+            {{else}}
+            <td><i class="fa fa-book textbookImage"></i></td>
+            {{/if}}
+            <td>{{title}}</td>
+            <td>{{condition}}</td>
+            <td>{{offer}}</td>
+            <td>{{expiresIn}}</td>
+            <td><a href="{{pathFor 'EditSellOffer'}}">Edit</a></td>
+            <td><a class="delete" href="#">Delete</a></td>
+          </tr>
+          {{/each}}
+          </tbody>
+        </table>
+      </div>
+      <!--Viewable by Admin -->
+      <h1>Viewable By Admin</h1>
+      <div class="well8">
+
+        {{#if isInRole 'admin'}}
+        <table class="table">
+          <tbody>
+          {{#each allSellOfferList}}
+          <tr>
+            {{#if image}}
+            <td><img class="textbookImage" src="{{image}}"></td>
+            {{else}}
+            <td><i class="fa fa-book textbookImage"></i></td>
+            {{/if}}
+            <td>{{title}}</td>
+            <td>{{condition}}</td>
+            <td>{{offer}}</td>
+            <td>{{expiresIn}}</td>
+            <td><a href="{{pathFor 'EditSellOffer'}}">Edit</a></td>
+            <td><a class="delete" href="#">Delete</a></td>
+            <td>{{owner}}</td>
+          </tr>
+          {{/each}}
+          </tbody>
+        </table>
+        {{/if}}
+
+      </div>
+    </div>
+    <div class="col-md-4">
+      {{> AddSellOffer}}
+    </div>
+  </div>
+
+  <!--
+  <h1>Your sell offers</h1>
+    <div class="well7">
 
       <table class="table">
         <thead>
         <tr>
-          <th>picture</th>
+          <th>Picture</th>
           <th>Title</th>
           <th>Condition</th>
           <th>Offer</th>
@@ -60,5 +133,7 @@
       </table>
       {{/if}}
     </div>
+    -->
+
   {{/IfLoggedIn}}
 </template>

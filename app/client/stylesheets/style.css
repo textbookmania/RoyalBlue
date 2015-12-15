@@ -130,3 +130,81 @@ th{
   overflow: hidden;
   overflow-y: scroll;
 }
+
+.well3 {
+   height:400px;
+   text-align: center;
+   color: white;
+   background-color: transparent;
+   border: none;
+ }
+
+.well3 {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.well4 {
+  height:400px;
+  text-align: center;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+.well4 {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.well5 {
+  height:250px;
+  text-align: center;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+.well5 {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.well6 {
+  height:200px;
+  text-align: center;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+.well6 {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.well7 {
+  height:250px;
+  text-align: center;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+.well7 {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.well8 {
+  height:200px;
+  text-align: center;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+.well8 {
+  overflow: hidden;
+  overflow-y: scroll;
+}

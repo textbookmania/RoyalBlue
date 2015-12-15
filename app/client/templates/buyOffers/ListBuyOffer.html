@@ -1,9 +1,114 @@
 <template name="ListBuyOffer">
-  <h1>Your buy offers</h1>
   {{#IfLoggedIn}}
-    <div class="well">
 
-      <table class="table">
+  <div class="row">
+    <div class="col-md-8">
+      <h1>Your buy offers</h1>
+      <div class="well5">
+
+        {{#if isInRole 'admin'}}
+        <table class="table table-condensed table-hover">
+          <thead>
+          <tr>
+            <th>Picture</th>
+            <th>Title</th>
+            <th>Condition</th>
+            <th>Offer</th>
+            <th>Seller</th>
+            <th>Expires</th>
+            <th></th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          {{#each allBuyOfferList}}
+          <tr>
+            {{#if image}}
+            <td><img class="textbookImage" src="{{image}}"></td>
+            {{else}}
+            <td><i class="fa fa-book textbookImage"></i></td>
+            {{/if}}
+            <td>{{title}}</td>
+            <td>{{condition}}</td>
+            <td>{{offer}}</td>
+            {{#if seller}}
+            <td>{{seller}}</td>
+            {{else}}
+            <td>none</td>
+            {{/if}}
+            <td>{{expiresIn}}</td>
+
+            <td><a href="{{pathFor 'EditBuyOffer'}}">Edit</a></td>
+            <td><a class="delete" href="#">Delete</a></td>
+            <td>{{owner}}</td>
+
+          </tr>
+          {{/each}}
+          </tbody>
+        </table>
+        {{/if}}
+
+      </div>
+
+      <!-- Visible by Admin roles -->
+      <h1>Viewable By Admin</h1>
+      <div class="well6">
+        {{#if isInRole 'admin'}}
+        <table class="table table-condensed table-hover">
+          <thead>
+          <tr>
+            <th>Picture</th>
+            <th>Title</th>
+            <th>Condition</th>
+            <th>Offer</th>
+            <th>Seller</th>
+            <th>Expires</th>
+            <th></th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          {{#each allBuyOfferList}}
+          <tr>
+            {{#if image}}
+            <td><img class="textbookImage" src="{{image}}"></td>
+            {{else}}
+            <td><i class="fa fa-book textbookImage"></i></td>
+            {{/if}}
+            <td>{{title}}</td>
+            <td>{{condition}}</td>
+            <td>{{offer}}</td>
+            {{#if seller}}
+            <td>{{seller}}</td>
+            {{else}}
+            <td>none</td>
+            {{/if}}
+            <td>{{expiresIn}}</td>
+
+            <td><a href="{{pathFor 'EditBuyOffer'}}">Edit</a></td>
+            <td><a class="delete" href="#">Delete</a></td>
+            <td>{{owner}}</td>
+
+          </tr>
+          {{/each}}
+          </tbody>
+        </table>
+        {{/if}}
+
+      </div>
+
+    </div>
+    <div class="col-md-4">
+      {{> AddBuyOffer}}
+    </div>
+  </div>
+
+
+  <!--
+  <h1>Your buy offers</h1>
+    <div class="well4">
+
+      <table class="table table-condensed table-hover">
         <thead>
         <tr>
           <th>picture</th>
@@ -75,5 +180,7 @@
       </table>
       {{/if}}
     </div>
+   -->
+
   {{/IfLoggedIn}}
 </template>

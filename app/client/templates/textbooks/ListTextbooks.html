@@ -1,6 +1,60 @@
 <template name="Textbooks">
-  <h1>List all textbooks</h1>
   {{#IfLoggedIn}}
+
+  <div class="row">
+    <div class="col-md-6">
+
+      <h1>List all textbooks</h1>
+      <div class="well3">
+
+        <table class="table table-condensed table-hover">
+          <thead>
+          <tr>
+            <th>Picture</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            {{#if isInRole 'admin'}}
+            <th>Edit</th>
+            <th>Delete</th>
+            {{/if}}
+          </tr>
+          </thead>
+
+          <tbody>
+          {{#each textbooksList}}
+          <tr>
+            {{#if image}}
+            <td><img class="textbookImage" src="{{image}}"></td>
+            {{else}}
+            <td><i class="fa fa-book textbookImage"></i></td>
+            {{/if}}
+            <td>{{title}}</td>
+            <td>{{author}}</td>
+            <td>{{isbn}}</td>
+            {{#if isInRole 'admin'}}
+            <td><a href="{{pathFor 'EditTextbooks'}}">Edit</a></td>
+            <td><a class="delete" href="#">Delete</a></td>
+            {{/if}}
+          </tr>
+          {{/each}}
+          </tbody>
+        </table>
+      </div>
+
+
+    </div>
+    <div class="col-md-6">
+
+      {{#if isInRole 'admin'}}
+      {{> AddTextbooks}}
+      {{/if}}
+
+    </div>
+  </div>
+
+  <!--
+  <h1>List all textbooks</h1>
     <div class="well">
 
       <table class="table">
@@ -40,5 +94,7 @@
       {{> AddTextbooks}}
       {{/if}}
     </div>
+    -->
+
   {{/IfLoggedIn}}
 </template>
