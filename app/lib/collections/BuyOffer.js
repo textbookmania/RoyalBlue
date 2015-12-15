@@ -8,10 +8,11 @@ Meteor.methods({
    * @param doc The Textbooks document.
    */
   addBuyOffer: function(doc) {
-    textList=Textbooks.find().fetch();
-    doc.image = _.find(textList, function(record){
+    var textBook=_.find(Textbooks.find().fetch(), function(record){
       return record.isbn === doc.isbn;
-    }).image;
+    });
+    doc.image = textBook.image;
+    doc.title = textBook.title;
     doc.expires=moment().add(7, 'days').format();
     doc.owner = Meteor.user().profile.name;
     //stop duplicate offers from same user
@@ -94,11 +95,20 @@ BuyOffer.attachSchema(new SimpleSchema({
     label: "Image URL",
     type: String,
     optional: true,
-    max: 100,
     autoform: {
       type: "hidden",
       group: buyOffer,
       placeholder: "image.org"
+    }
+  },
+  title: {
+    label: "title",
+    type: String,
+    optional: true,
+    autoform: {
+      type: "hidden",
+      group: buyOffer,
+      placeholder: "title"
     }
   },
   expires: {

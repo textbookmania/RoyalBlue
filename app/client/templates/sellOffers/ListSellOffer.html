@@ -7,12 +7,12 @@
         <thead>
         <tr>
           <th>picture</th>
-          <th>ISBN</th>
+          <th>Title</th>
           <th>Condition</th>
           <th>Offer</th>
           <th>Expires</th>
-
-
+          <th></th>
+          <th></th>
         </tr>
         </thead>
 
@@ -24,13 +24,12 @@
             {{else}}
             <td><i class="fa fa-book textbookImage"></i></td>
             {{/if}}
-            <td>{{isbn}}</td>
+            <td>{{title}}</td>
             <td>{{condition}}</td>
             <td>{{offer}}</td>
             <td>{{expiresIn}}</td>
             <td><a href="{{pathFor 'EditSellOffer'}}">Edit</a></td>
             <td><a class="delete" href="#">Delete</a></td>
-
           </tr>
         {{/each}}
         </tbody>
@@ -40,8 +39,6 @@
 
       {{#if isInRole 'admin'}}
       <table class="table">
-
-
         <tbody>
         {{#each allSellOfferList}}
         <tr>
@@ -50,13 +47,13 @@
           {{else}}
           <td><i class="fa fa-book textbookImage"></i></td>
           {{/if}}
-          <td>{{isbn}}</td>
+          <td>{{title}}</td>
           <td>{{condition}}</td>
           <td>{{offer}}</td>
           <td>{{expiresIn}}</td>
           <td><a href="{{pathFor 'EditSellOffer'}}">Edit</a></td>
           <td><a class="delete" href="#">Delete</a></td>
-
+          <td>{{owner}}</td>
         </tr>
         {{/each}}
         </tbody>

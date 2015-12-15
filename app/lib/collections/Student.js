@@ -80,7 +80,7 @@ Meteor.methods({
           "Your offer to buy " + doc.isbn + " has been accepted by " + doc.owner);
     }
     BuyOffer.update({_id: docId}, {$set:{expires: doc.expires, seller: doc.seller}});
-    SellOffer.update({_id:sellOfferId},{$set:{expires: doc.expires}});
+    SellOffer.update({_id:sellOfferId},{$set:{expires: doc.expires, buyer: doc.owner}});
   },
   /**
    * function to send email to an owner

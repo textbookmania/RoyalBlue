@@ -9,28 +9,24 @@
         <caption>Sell Offer Matches</caption>
         <thead>
         <tr>
-          <th>picture</th>
+          <th>Title</th>
           <th>ISBN</th>
           <th>Condition</th>
           <th>Offer</th>
           <th>Expires</th>
-          <th>Accept Offer</th>
+          <th>Buyer</th>
         </tr>
         </thead>
 
         <tbody>
         {{#each findSellMatches}}
         <tr>
-          {{#if image}}
-          <td><img class="textbookImage" src="{{image}}"></td>
-          {{else}}
-          <td><i class="fa fa-book textbookImage"></i></td>
-          {{/if}}
+          <td>{{title}}</td>
           <td>{{isbn}}</td>
           <td>{{condition}}</td>
           <td>{{offer}}</td>
           <td>{{expires}}</td>
-          <td><a class="accept" href="#">Accept</a></td>
+          <td><a class="accept" href="#">{{owner}}</a></td>
         </tr>
         {{/each}}
         </tbody>
@@ -42,26 +38,24 @@
         <caption>Buy Offer Matches</caption>
         <thead>
         <tr>
-          <th>picture</th>
+          <th>Title</th>
           <th>ISBN</th>
           <th>Condition</th>
           <th>Offer</th>
           <th>Expires</th>
+          <th>Seller</th>
         </tr>
         </thead>
 
         <tbody>
         {{#each findBuyMatches}}
         <tr>
-          {{#if image}}
-          <td><img class="textbookImage" src="{{image}}"></td>
-          {{else}}
-          <td><i class="fa fa-book textbookImage"></i></td>
-          {{/if}}
+          <td>{{title}}</td>
           <td>{{isbn}}</td>
           <td>{{condition}}</td>
           <td>{{offer}}</td>
           <td>{{expires}}</td>
+          <td><a class="openChat" href="#">{{owner}}</a></td>
         </tr>
 
         {{/each}}
