@@ -1,9 +1,75 @@
 <template name="Matches">
+  {{#IfLoggedIn}}
+
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Sell Offer Matches</h1>
+      <div class="well9">
+        <table class="table table-condensed table-hover">
+          <thead>
+          <tr>
+            <th>Title</th>
+            <th>ISBN</th>
+            <th>Condition</th>
+            <th>Offer</th>
+            <th>Expires</th>
+            <th>Buyer</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          {{#each findSellMatches}}
+          <tr>
+            <td>{{title}}</td>
+            <td>{{isbn}}</td>
+            <td>{{condition}}</td>
+            <td>{{offer}}</td>
+            <td>{{expires}}</td>
+            <td><a class="accept" href="#">{{owner}}</a></td>
+          </tr>
+          {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h1>Buy Offer Matches</h1>
+      <div class="well10">
+        <table class="table table-condensed table-hover">
+          <thead>
+          <tr>
+            <th>Title</th>
+            <th>ISBN</th>
+            <th>Condition</th>
+            <th>Offer</th>
+            <th>Expires</th>
+            <th>Seller</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          {{#each findBuyMatches}}
+          <tr>
+            <td>{{title}}</td>
+            <td>{{isbn}}</td>
+            <td>{{condition}}</td>
+            <td>{{offer}}</td>
+            <td>{{expires}}</td>
+            <td><a class="openChat" href="#">{{owner}}</a></td>
+          </tr>
+
+          {{/each}}
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+
+  <!--
   <div class="container">
     <h1>Matches</h1>
 
-
-    {{#IfLoggedIn}}
     <div class="col-sm-6 well">
       <table class="table">
         <caption>Sell Offer Matches</caption>
@@ -63,7 +129,8 @@
       </table>
     </div>
 
-
-    {{/IfLoggedIn}}
   </div>
+  -->
+
+  {{/IfLoggedIn}}
 </template>

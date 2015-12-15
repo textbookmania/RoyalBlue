@@ -1,10 +1,14 @@
 <template name="ListStudent">
-  <h1>List all Students</h1>
   {{#IfLoggedIn}}
 
-    <div class="well">
+  <div class="row">
+  <div class="col-md-6">
 
-      <table class="table">
+    <h1>List of all Students</h1>
+
+    <div class="well2">
+
+      <table class="table table-condensed table-hover">
         <thead>
         <tr>
           <th>Picture</th>
@@ -21,27 +25,32 @@
 
         <tbody>
         {{#each studentList}}
-          <tr>
-            {{#if image}}
-            <td><img class="userImage img-rounded" src="{{image}}"></td>
-            {{else}}
-            <td><i class="fa fa-user userImage"></i></td>
-            {{/if}}
-            <td>{{first}}</td>
-            <td>{{last}}</td>
-            <td>{{email}}@hawaii.edu</td>
-            {{#if isInRole 'admin'}}
-            <td><a href="{{pathFor 'EditStudent'}}">Edit</a></td>
-            <td><a class="delete" href="#">Delete</a></td>
-            {{/if}}
-          </tr>
+        <tr>
+          {{#if image}}
+          <td><img class="userImage img-rounded" src="{{image}}"></td>
+          {{else}}
+          <td><i class="fa fa-user userImage"></i></td>
+          {{/if}}
+          <td>{{first}}</td>
+          <td>{{last}}</td>
+          <td>{{email}}@hawaii.edu</td>
+          {{#if isInRole 'admin'}}
+          <td><a href="{{pathFor 'EditStudent'}}">Edit</a></td>
+          <td><a class="delete" href="#">Delete</a></td>
+          {{/if}}
+        </tr>
         {{/each}}
         </tbody>
       </table>
-      {{#if isInRole 'admin'}}
-      {{> AddStudent}}
-      {{/if}}
     </div>
+  </div>
+  <div class="col-md-6">
 
+    {{#if isInRole 'admin'}}
+    {{> AddStudent}}
+    {{/if}}
+
+  </div>
+  </div>
   {{/IfLoggedIn}}
 </template>
