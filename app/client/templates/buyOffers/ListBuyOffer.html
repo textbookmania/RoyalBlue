@@ -4,9 +4,9 @@
   <div class="row">
     <div class="col-md-8">
       <h1>Your Buy offers</h1>
+
       <div class="well5">
 
-        {{#if isInRole 'admin'}}
         <table class="table table-condensed table-hover">
           <thead>
           <tr>
@@ -37,23 +37,21 @@
             <td>none</td>
             {{/if}}
             <td>{{expiresIn}}</td>
-
             <td><a href="{{pathFor 'EditBuyOffer'}}">Edit</a></td>
             <td><a class="delete" href="#">Delete</a></td>
             <td>{{owner}}</td>
-
           </tr>
           {{/each}}
           </tbody>
         </table>
-        {{/if}}
 
       </div>
-
+      {{#if isInRole 'admin'}}
       <!-- Visible by Admin roles -->
       <h1>Viewable By Admin</h1>
+
       <div class="well6">
-        {{#if isInRole 'admin'}}
+
         <table class="table table-condensed table-hover">
           <thead>
           <tr>
@@ -93,10 +91,10 @@
           {{/each}}
           </tbody>
         </table>
-        {{/if}}
+
 
       </div>
-
+      {{/if}}
     </div>
     <div class="col-md-4">
       {{> AddBuyOffer}}

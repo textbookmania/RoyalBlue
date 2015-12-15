@@ -39,10 +39,11 @@
         </table>
       </div>
       <!--Viewable by Admin -->
+
+      {{#if isInRole 'admin'}}
       <h1>Viewable By Admin</h1>
       <div class="well8">
 
-        {{#if isInRole 'admin'}}
         <table class="table table-condensed table-hover">
           <thead>
           <tr>
@@ -74,9 +75,9 @@
           {{/each}}
           </tbody>
         </table>
-        {{/if}}
 
       </div>
+      {{/if}}
     </div>
     <div class="col-md-4">
       {{> AddSellOffer}}
