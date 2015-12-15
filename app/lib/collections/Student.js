@@ -52,16 +52,14 @@ Meteor.methods({
    *Remove student record and add to ban list
    * @param docID ID of record to be removed.
    */
-  deleteStudent: function (docID) {
+  deleteStudent: function (doc, docID) {
     if (Roles.userIsInRole(Meteor.userId()), 'admin') {
-      /*
       if (Meteor.isServer) {
         //insert into banned_users
         if (!_.contains(Meteor.settings.banned_users, doc.email)) {
           Meteor.settings.banned_users.push(doc.email);
         }
       }
-      */
       Student.remove(docID);
     }
   },

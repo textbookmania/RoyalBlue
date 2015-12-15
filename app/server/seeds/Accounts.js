@@ -26,3 +26,10 @@ Accounts.validateNewUser(function (user) {
   alert("Please register a new account");
   throw new Meteor.Error(403, "User not in the allowed list");
 });
+
+Accounts.validateLoginAttempt(function(info) {
+  if(_.contains(Meteor.settings.banned_users, info.user.profile.name)){
+    return false;
+  }
+  return true;
+});
