@@ -208,3 +208,29 @@ th{
   overflow: hidden;
   overflow-y: scroll;
 }
+
+.well9 {
+  height:400px;
+  text-align: center;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+.well9 {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.well10 {
+  height:400px;
+  text-align: center;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+.well10 {
+  overflow: hidden;
+  overflow-y: scroll;
+}
