@@ -17,7 +17,7 @@ var textbooksSeeds = [
 
   {title: "The C Programming Language", author: "Brian W. Kernighan & Dennis M. Ritchie", isbn: "9780131103627",image: "http://images.amazon.com/images/P/0131103628.01.LZ.jpg"},
 
-  {title: "Introduction to Algorithmsa", author: "Thomas H. Cormen, Charles E. Leiserson), Ronald L. Rivest & Clifford Stein", isbn: "9780262033848",image: "http://images.amazon.com/images/P/0262033844.01.LZ.jpg"},
+  {title: "Introduction to Algorithms", author: "Thomas H. Cormen, Charles E. Leiserson), Ronald L. Rivest & Clifford Stein", isbn: "9780262033848",image: "http://images.amazon.com/images/P/0262033844.01.LZ.jpg"},
 
   {title: "Programming Language Pragmatics", author: "Michael L. Scott", isbn: "10: 0123745144",image: "http://images.amazon.com/images/P/0123745144.01.LZ.jpg"},
 

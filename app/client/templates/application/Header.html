@@ -21,7 +21,7 @@
           </li>
           
           <li>
-            <a data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-book fa-2x"></i><b class="caret"></b></a>
+            <!--a data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-book fa-2x"></i><b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a href="{{ pathFor 'Textbooks' }}">List Textbooks</a></li>
 
@@ -29,23 +29,26 @@
               <li><a href="{{ pathFor 'AddTextbooks' }}">Add Textbooks</a></li>
               {{/if}}
 
-            </ul>
+            </ul-->
+            <a href="{{ pathFor 'Textbooks' }}"><i class="fa fa-book fa-2x"></i></a>
           </li>
 
           <li>
-            <a data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-cart-plus fa-2x"></i><b class="caret"></b></a>
+            <!--a data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-cart-plus fa-2x"></i><b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a href="{{ pathFor 'ListBuyOffer' }}">List BuyOffers</a></li>
               <li><a href="{{ pathFor 'AddBuyOffer' }}">Add Buy Offer</a></li>
-            </ul>
+            </ul-->
+            <a href="{{ pathFor 'ListBuyOffer' }}"><i class="fa fa-cart-plus fa-2x"></i></a>
           </li>
 
           <li>
-            <a data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-usd fa-2x"></i><b class="caret"></b></a>
+            <!--a data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-usd fa-2x"></i><b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a href="{{ pathFor 'ListSellOffer' }}">List Sell Offers</a></li>
               <li><a href="{{ pathFor 'AddSellOffer' }}">Add Sell Offer</a></li>
-            </ul>
+            </ul-->
+            <a href="{{ pathFor 'ListSellOffer' }}"><i class="fa fa-usd fa-2x"></i></a>
           </li>
           <li><a href="{{ pathFor 'Matches' }}"><i class="fa fa-check-circle-o fa-2x"></i></a></li>
 
